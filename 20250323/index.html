@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 這是標題區 -->
+  <a href="www.google.com">這是超連結</a>
+  <a href="www.google.com">這是超連結</a>
+  <a href="www.google.com">這是超連結</a>
+  
+  <div href="www.google.com" title="這是屬性">這是超連結</div>
+  <div>hello1</div>
+  <!-- 絕對路徑 -->
+  <img src="http://127.0.0.1:5500/20250323/happy.jpg" width="200px" alt="今天是我生日">
+  <!-- 相對路徑 -->
+
+  <!-- 往同層找 -->
+  <img src="./happy.jpg" width="200px" alt="今天是我生日">
+  <!-- <img src="/happy.jpg" width="200px" alt="今天是我生日">
+  路徑在根目錄，所以找不到 -->
+  
+  <img src="../20250323/happy.jpg" width="200px" alt="今天是我生日">
+  <img src="/20250323/happy.jpg" width="200px" alt="今天是我生日">
+  <!-- 往下找 -->
+  <img src="./first/first_happy.jpg" width="200px" alt="今天是我生日">
+
+</body>
+
+</html>
