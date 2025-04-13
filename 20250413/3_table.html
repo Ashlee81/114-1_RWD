@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表格</title>
+</head>
+
+<body>
+  <hr>
+  <table border="1px" width="500px" cellspacing="0" cellpadding="10">
+    <!-- 表格的表頭 -->
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>英文成績</th>
+        <th>數學成績</th>
+      </tr>
+    </thead>
+    <!-- 表格的身體 -->
+    <tbody>
+      <tr>
+        <td>Gimmy</td>
+        <td>99</td>
+        <td>86</td>
+      </tr>
+      <tr>
+        <td>Abee</td>
+        <td>90</td>
+        <td>92</td>
+      </tr>
+    </tbody>
+    <!-- 表格的表尾 -->
+    <tfoot>
+      <tr>
+        <th>平均</th>
+        <th>98</th>
+        <th>86</th>
+      </tr>
+    </tfoot>
+  </table>
+  <hr>
+  <table border="1px" width="600px" cellspacing="0" cellpadding="10">
+    <tr>
+      <td colspan="3">A1</td>
+      <!-- <td>A2</td> -->
+      <!-- <td>A3</td> -->
+      <td>A4</td>
+    </tr>
+    <tr>
+      <td>B1</td>
+      <td rowspan="2">B2</td>
+      <td>B3</td>
+      <td>B4</td>
+    </tr>
+    <tr>
+      <td>C1</td>
+      <!-- <td>C2</td> -->
+      <td rowspan="2" colspan="2">C3</td>
+      <!-- <td>C4</td> -->
+    </tr>
+    <tr>
+      <td>D1</td>
+      <td>D2</td>
+      <!-- <td>D3</td> -->
+      <!-- <td>D4</td> -->
+    </tr>
+  </table>
+
+</body>
+
+</html>

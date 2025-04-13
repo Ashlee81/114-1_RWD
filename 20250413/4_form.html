@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表單</title>
+</head>
+
+<body>
+  <form action="http://www.google.com">
+    <h1>hello world</h1>
+    <!-- 裡面放的欄位，決定表單有哪些項目需要填寫 -->
+    <table border="0" cellpadding="0" method="get">
+      <thead>
+        <tr>
+          <td colspan="2">登入畫面</td>
+          <!-- <td></td> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td width="100" align="right">帳號：</td>
+          <td><input type="text" name="account" placeholder="請輸入帳號" value="Loki" readonly></td>
+        </tr>
+        <tr>
+          <td align="right">密碼：</td>
+          <td><input type="password" name="password" placeholder="請輸入密碼" required></td>
+        </tr>
+        <tr>
+          <td align="right">其他：</td>
+          <td><input type="number" name="password" placeholder="請輸入數字" required disabled></td>
+        </tr>
+        <tr>
+          <td width="100" align="right">性別:</td>
+          <td>
+            <input id="man" type="radio" name="gender" value="man"><label for="man"><strong>男</strong></label>
+            <!-- 下面label的包法比較好 -->
+            <label><input type="radio" name="gender" value="woman">女</label>
+            <input type="radio" name="gender" value="unknow">不提供
+          </td>
+        </tr>
+        <tr>
+          <td width="100" align="right">興趣:</td>
+          <td>
+            <label><input type="checkbox" name="interesting[]" value="sleep">睡覺</label>
+            <label><input type="checkbox" name="interesting[]" value="comic">看漫畫</label>
+            <label><input type="checkbox" name="interesting[]" value="sport">運動</label>
+            <label><input type="checkbox" name="interesting[]" value="food">吃美食</label>
+            <label><input type="checkbox" name="interesting[]" value="readbook">看書</label>
+          </td>
+        </tr>
+        
+
+        <tr>
+          <td width="100" align="right">從哪得知:<td>
+          <td>
+            <select name="source">
+              <option value="請選擇">請選擇</option>
+              <option value="google">google</option>
+              <option value="facebook">facebook</option>
+              <option value="friend" selected>朋友介紹</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td width="100" align="right">備註:</td>
+          <td>
+            <textarea cols="50" row="100" name="memo">
+              內容
+            </textarea>
+          </td>
+        </tr>
+        <tr>
+          <td width="100" align="right">檔案上傳</td>
+          <td>
+            <input type="file">
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">
+            <input type="hidden" name="coupon" value="9453AX">
+            <br>
+            <hr>
+            <br>
+            <input type="reset" value="重設">
+            <input type="submit" value="送出">
+            <input type="button" value="跟表單無關">
+            <input type="date" value="月曆">
+            <input type="datetime-local" value="含時間月曆">
+            <input type="email" value="信箱">
+            <button>送出</button>
+          </td>
+
+          <!-- <td></td> -->
+        </tr>
+      </tfoot>
+    </table>
+
+
+  </form>
+
+  <!-- <a href="http://www.google.com"><button>送出</button></a>
+  <button>送出</button> -->
+</body>
+
+</html>

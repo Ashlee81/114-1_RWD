@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order List,Unorder List</title>
+</head>
+
+<body>
+  <ul>
+    <h4>程式碼放入html</h4>
+    <pre>
+      <ol>
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+      </ol>
+    </pre>
+    <!-- ========保留文章原本的段落======== -->
+    <pre>
+      
+    88             ,ad8888ba,    88      a8P   88                  88  88         db         888b      88    ,ad8888ba,   
+    88            d8"'    `"8b   88    ,88'    88                  88  88        d88b        8888b     88   d8"'    `"8b  
+    88           d8'        `8b  88  ,88"      88                  88  88       d8'`8b       88 `8b    88  d8'            
+    88           88          88  88,d88'       88                  88  88      d8'  `8b      88  `8b   88  88             
+    88           88          88  8888"88,      88                  88  88     d8YaaaaY8b     88   `8b  88  88      88888  
+    88           Y8,        ,8P  88P   Y8b     88                  88  88    d8""""""""8b    88    `8b 88  Y8,        88  
+    88            Y8a.    .a8P   88     "88,   88          88,   ,d88  88   d8'        `8b   88     `8888   Y8a.    .a88  
+    88888888888    `"Y8888Y"'    88       Y8b  88           "Y8888P"   88  d8'          `8b  88      `888    `"Y88888P"   
+
+    </pre>
+    <!-- ========跟瀏覽器說這是程式碼======== -->
+    <code>
+      function overtime(){
+        time = new Date();
+        pos_s = time.getSeconds();
+        pos_m = time.getMinutes();
+        pos_h = time.getHours();
+        x = pos_s * 6;
+        y = pos_m * 6 + pos_s * 0.1; /*對 Y 來說還有一個角度是 60 秒滿足 6 度*/
+        z = pos_h * 30 + pos_m * 0.5; /*對 Z 來說還有一個角度是 60 分鐘滿足 30 度*/
+        document.getElementsByClassName('osec4')[0].style.transform=`rotate(${x}deg)`;
+        document.getElementsByClassName('omin4')[0].style.transform=`rotate(${y}deg)`;
+        document.getElementsByClassName('ohour4')[0].style.transform=`rotate(${z}deg)`;
+      }
+    </code>
+    <li>
+      <a href="http://www.google.com" target="_blank">
+        <h4>法規一</h4>
+      </a>
+      <p>
+        動畫原因提交年齡和平欣賞問題沒想到轉讓，讓他有些明白戰士邀請，留言最為期待降價他們的有時什麼樣，樣子和他上帝遵守能在更新的人此次讓我們建築這一點，學習答案雜誌台北，受到給你行為狀態站點合同，如下以上一方面，國外在他大全國務院真正哥哥也不這一不說我會網域名。
+      </p>
+    </li>
+    <li>
+      <h4><a href="http://www.google.com" target="_blank">法規二</a></h4>
+      <p>
+        動畫原因提交年齡和平欣賞問題沒想到轉讓，讓他有些明白戰士邀請，留言最為期待降價他們的有時什麼樣，樣子和他上帝遵守能在更新的人此次讓我們建築這一點，學習答案雜誌台北，受到給你行為狀態站點合同，如下以上一方面，國外在他大全國務院真正哥哥也不這一不說我會網域名。
+      </p>
+    </li>
+    <a href="http://www.google.com" target="_blank">
+      <li>
+        <h4>法規三</h4>
+        <p>
+          動畫原因提交年齡和平欣賞問題沒想到轉讓，讓他有些明白戰士邀請，留言最為期待降價他們的有時什麼樣，樣子和他上帝遵守能在更新的人此次讓我們建築這一點，學習答案雜誌台北，受到給你行為狀態站點合同，如下以上一方面，國外在他大全國務院真正哥哥也不這一不說我會網域名。
+        </p>
+      </li>
+    </a>
+    
+    <li>
+      <h4>法規四</h4>
+      <!-- 無語意標籤，純粹幫文字加樣式 -->
+      <p>
+        <b>動畫原因</b>提交年齡<mark>和平欣賞問題沒想到轉讓</mark>，讓他有些明白戰士邀請，留言最為期待降價他們的有時什麼樣，樣子和他<s>上帝遵守</s>能在更新的人此次讓我們建築這一點，學習答案雜誌台北，受到給你行為狀態站點合同，如下以上一方面，<i>國外在他大全國務院真正哥哥</i>也不這一<u>不說我會網域名。</u>
+      </p>
+      <q>這是引用</q>
+      <blockquote>這是引用</blockquote>
+      <!-- 語意化標籤追求重點，想與網頁爬蟲強調這是重點的話，就用以下幾種 -->
+      <p>
+        <strong>動畫原因</strong>提交年齡和平欣賞問題沒想到轉讓，讓他有些明白戰士邀請，留言最為期待降價他們的有時什麼樣，樣子和他<del>上帝遵守</del>能在更新的人此次讓我們建築這一點，學習答案雜誌台北，受到給你行為狀態站點合同，如下以上一方面，<em>國外在他大全國務院真正哥哥</em>也不這一<ins>不說我會網域名</ins>。
+      </p>
+      <p><small>將在站長禁止把你它的職務</small>大陸吸引共同<sup>你能郵箱重點</sup>並且，幾次第二天熱點緊急及時每一個那就諮詢上午黃金轉讓各類出口，增強方向認定禮物平台，次數用戶步驟醫院不見每天日常無限還能，預防部分我愛浪費相當營養生意差不多晶片，實踐涉及平台位元都是緊張是一種不願意發佈是。</p>
+    </li>
+    
+    <p>X<sup>2</sup>+Y<sub>2</sub>=Z</p>
+    
+  </ul>
+  <hr>
+  <h1>hello world</h1>
+  <hr>
+  <!-- emmet寫法:ul>li*4{$$$} -->
+  <ul>
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+  </ul>
+  <ol>
+    <li>BBB</li>
+    <li>BBB</li>
+    <li>BBB</li>
+    <li>BBB</li>
+  </ol>
+
+  <hr>
+
+  <ol start="6">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+  </ol>
+
+</body>
+
+</html>
