@@ -8,20 +8,29 @@
 </head>
 
 <body>
-  <!-- target="showBox"需查一下是做什麼用 -->
+  <!-- iframe name屬性的進階用法: 如果a的target屬性值，輸入與iframe name相同的值，點選a後，a的內容就可以投射到iframe中-->
+  <iframe name="showBox" src="" frameborder="1" width="500" height="300" ></iframe>
+  <br>
   <a target="showBox" href="../20250323/index.html" >last class</a>
+  <a target="showBox" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.972836113581!2d121.4477018!3d25.034995900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a906d7e200fb%3A0x294e082fef7d071f!2z5qiC6YecIExvdmUgSG90IFBvdCDmpbXkuIrpjYvniako5paw6I6K5bqXKQ!5e0!3m2!1szh-TW!2stw!4v1744513268016!5m2!1szh-TW!2stw" >Google map</a>
   <a target="showBox" href="https://summer10920.github.io/" >blog</a>
   <a target="showBox" href="https://www.youtube.com/embed/TXSD0QeyDZA?si=IoRn2LrvxAeDfWU-" >台灣尋奇</a>
-  <iframe src="" frameborder="3"width="500" height="300" ></iframe>
+  
   <hr>
+  
   <iframe src="https://summer10920.github.io/" width="500" height="450" ></iframe>
-  <iframe src="https://www.mobile01.com/" width="500" height="450" ></iframe>
+  
   <hr>
+  
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.972836113581!2d121.4477018!3d25.034995900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a906d7e200fb%3A0x294e082fef7d071f!2z5qiC6YecIExvdmUgSG90IFBvdCDmpbXkuIrpjYvniako5paw6I6K5bqXKQ!5e0!3m2!1szh-TW!2stw!4v1744513268016!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
   <hr>
-  <video src="./demo.mp4" width="300" controls loop>AAA</video>
+  
+  <video src="./demo.mp4" width="300" controls loop>影片失連才會出現的文字</video>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/TXSD0QeyDZA?si=IoRn2LrvxAeDfWU-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
   <hr>
+  
   <!-- width跟height不建議用html屬性控制，有css可控就使用css -->
   <img src="../20250323/happy.jpg" width="150px" height="150px" alt="圖片失連會顯示的文字" title="hover時顯示的文字">
 </body>
