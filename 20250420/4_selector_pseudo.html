@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>偽類選擇Pseudo Classes Selector</title>
+  <style>
+    a {
+      color: blue;
+    }
+
+    a:link {
+      color: orange;
+    }
+
+    /*少用*/
+
+    a:visited {
+      color: purple;
+    }
+
+    /*少用*/
+
+    a:hover {
+      color: red;
+    }
+
+    a:active {
+      color: green;
+    }
+
+    /*少用*/
+
+    h1:hover {
+      /* 每個元素都有hover */
+      color: red;
+    }
+
+    /* =============demo1==================== */
+    table.demo1 tr.odd {
+      background-color: lightblue;
+    }
+
+    /* 偽類:否定選擇器 */
+    table.demo1 tr:not(.odd) {
+      background-color: lightgoldenrodyellow;
+    }
+
+    /* =============demo2:建議使用nth偽類來做==================== */
+    table.demo2 tr {
+      background-color: gold;
+    }
+
+    /* 偽類:關係選擇器 */
+    /* table.demo2 tr:nth-child(odd) {
+      background-color: lightgoldenrodyellow;
+    }*/
+    table.demo2 tr:nth-child(3n+1) {
+      background-color: lightpink;
+    }
+
+    table.demo2 tr:nth-child(3n+2) {
+      background-color: lightseagreen;
+    }
+
+    table.demo2 tr:nth-child(3n) {
+      background-color: lightcyan;
+    }
+
+    /* 🛑這裡要重聽，不太懂 */
+    /* h5:nth-child(2n){
+      background-color: red;
+    } */
+    h5:nth-of-type(2n) {
+      background-color: lightblue;
+    }
+
+    h5:nth-last-of-type(2) {
+      background-color: greenyellow;
+    }
+
+    h5:nth-last-child(2) {
+      background-color: orange;
+    }
+
+    h5:first-child {
+      background-color: purple;
+    }
+
+    h5:last-child {
+      background-color: navy;
+    }
+
+    /* has偽類選擇器，元素持有指定的後代元素或class name就會吃到 */
+    .demo4 section:has(h1) {
+      background-color: lightgray;
+    }
+
+    .demo5:hover {
+      background-color: greenyellow;
+    }
+
+    .demo5:focus {
+      background-color: salmon;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" class="demo5">
+  <hr>
+  <div class="demo4">
+    <section>
+      <div>
+        <h1>Lorem ipsum dolor sit.</h1>
+      </div>
+    </section>
+    <section>
+      <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+    </section>
+  </div>
+  <hr>
+  <div class="demo3">
+    <h5>H5 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h5>H5 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h5>H5 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h5>H5 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h5>H5 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+  </div>
+  <hr>
+  <table border="1" width="300" cellspacing="0" class="demo2">
+    <tr>
+      <td>Ash1</td>
+      <td>Ash1</td>
+    </tr>
+    <tr>
+      <td>Ash2</td>
+      <td>Ash2</td>
+    </tr>
+    <tr>
+      <td>Ash3</td>
+      <td>Ash3</td>
+    </tr>
+    <tr>
+      <td>Ash4</td>
+      <td>Ash4</td>
+    </tr>
+    <tr>
+      <td>Ash5</td>
+      <td>Ash5</td>
+    </tr>
+    <tr>
+      <td>As6</td>
+      <td>As6</td>
+    </tr>
+  </table>
+  <br>
+  <table border="1" width="300" cellspacing="0" class="demo1">
+    <tr>
+      <td>Ash1</td>
+      <td class="">Ash1</td>
+    </tr>
+    <tr class="odd">
+      <td>Ash2</td>
+      <td class="">Ash2</td>
+    </tr>
+    <tr>
+      <td>Ash3</td>
+      <td class="">Ash3</td>
+    </tr>
+    <tr class="odd">
+      <td>Ash4</td>
+      <td class="">Ash4</td>
+    </tr>
+  </table>
+  <hr>
+  <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+  <hr>
+  <a href="http://www.googrrrle.com">Google</a>
+  <hr>
+  <a class="ash" href="http://www.google.com">Google ash</a>
+
+
+</body>
+
+</html>

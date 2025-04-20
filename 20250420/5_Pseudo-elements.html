@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>偽元素</title>
+  <style>
+    *{
+      font-family: '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+    }
+    div.demo1 {
+      color: red;
+    }
+
+    /* 偽元素使用的必要條件：**一定要寫content屬性** */
+    /* 沒有**頭尾一組**標籤的元素，無法使用偽元素 */
+    div.demo1::before {
+      content: 'WOW';
+      color: white;
+      background-color: black;
+    }
+
+    div.demo1::after {
+      content: '<' attr(title)'>';
+      color: white;
+      background-color: navy;
+    }
+
+    .demo3::first-letter{
+      /* 一串文字的首字 */
+      font-size: 30px;
+      color: red;
+      font-weight: 800;
+    }
+    .demo3::first-line{
+      /* 一串文字的第一行 */
+      text-decoration: dashed underline blueviolet;
+    }
+    .demo3::selection{
+     /* 被游標反白會出現的效果 */
+      background-color: yellowgreen;
+      color: white;
+    }
+
+  </style>
+</head>
+
+<body>
+  <p class="demo3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, exercitationem aut, excepturi quae qui eligendi modi unde doloremque fugit ratione sunt ipsam nobis ad ea iusto facere adipisci eius sit dolore? Modi ab provident esse beatae error eaque tenetur, atque, earum natus ipsum incidunt cupiditate veniam animi culpa mollitia molestias nostrum inventore possimus saepe facere non et quo commodi. Doloremque illo molestias earum laudantium, magnam perspiciatis labore totam, dolores accusamus debitis laborum dolorem repellat quidem inventore odit officiis, fugiat aspernatur tempore quo esse velit? Commodi odit dolore incidunt corrupti accusamus aliquid eligendi voluptatibus totam doloribus, accusantium consectetur excepturi consequuntur, debitis dolor. Nam distinctio dolor repellendus quasi, nisi debitis cum mollitia maiores dolorum recusandae fugit numquam labore repudiandae architecto corporis molestias quidem quos quia sequi veritatis, dolorem quisquam. Similique, accusantium fuga! Fugit quae nisi dolore illum qui recusandae dolor sapiente eveniet facere nesciunt maxime sit asperiores consequuntur suscipit, impedit tempora itaque quas? Ducimus, numquam, placeat nihil praesentium repellat obcaecati debitis neque eos adipisci veniam, saepe architecto! Temporibus tenetur voluptatum quia tempora natus corrupti earum! Alias, aperiam fugit temporibus earum quam, architecto laboriosam error deleniti odit sunt, enim ratione dolorum maiores libero? Porro corrupti repudiandae aliquam temporibus cum fugit inventore tempore obcaecati.</p>
+  <hr>
+  <div class="demo2">Ash</div>
+  <div class="demo1" title="HEY">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, rem.</div>
+</body>
+
+</html>

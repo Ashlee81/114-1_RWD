@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>選擇器</title>
+  <style>
+    h1,
+    h2,
+    .menu {
+      color: orange;
+    }
+
+    .r {
+      color: red;
+    }
+
+    .g {
+      color: green;
+    }
+
+    .bg-black {
+      background-color: black;
+    }
+
+    #pp {
+      background-color: purple;
+    }
+
+    /* ======================================== */
+    /* li {
+      color: black !important;
+    } */
+    li {
+      color: black;
+    }
+
+    .primary {
+      color: blue;
+    }
+
+    .red {
+      color: red;
+    }
+
+    #green {
+      color: green;
+    }
+
+    /* 不建議用id來撰寫css(因為只會使用一次，浪費)，某部分觀念認為id是專門給JS使用 */
+    /* css優先權(高~低): !important > 行內style > id > class > 元素標籤
+    越靠近自己的style越優先。
+    important少用，可能造成後續維護困難。*/
+  </style>
+</head>
+
+<!-- **弱掃:弱點掃描 -->
+
+<body>
+  <ul class="primary">
+    <li>001</li>
+    <li class="red">002</li>
+    <li class="red">003</li>
+    <li class="red" id="green" style="color: rgb(163, 101, 221);">004</li>
+  </ul>
+  <ul class="menu">
+    <li>001</li>
+    <!-- 元素想套用兩種以上class==>用空白鍵分隔class名稱即可 -->
+    <li class="r bg-black">002</li>
+    <li class="g" id="pp">003</li>
+  </ul>
+  <hr>
+
+  <h1 class="r">hello world</h1>
+  <h1 class="g">hello world</h1>
+  <h1>hello world</h1>
+  <p class="r">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, laboriosam alias mollitia hic omnis
+    assumenda voluptates laborum voluptatem, tempora illo non ad, officia placeat repudiandae cumque quo cupiditate ut
+    iure?</p>
+</body>
+
+</html>
