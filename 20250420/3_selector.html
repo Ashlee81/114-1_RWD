@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* nav全部的後代(子、孫、曾孫)用空格 */
+    nav p {
+      color: red;
+    }
+
+    /* nav的子元素(兒子)用"箭頭"*/
+    /* **箭頭的權重比空格高 */
+    nav>p {
+      color: blue;
+    }
+
+    /* 指定"有title屬性的h6"才會吃到 */
+    h6[title]{
+      color: goldenrod;
+    }
+    /* 擁有"lightblue"的h6才會吃到 */
+    h6.lightblue{
+      color: lightblue;
+    }
+  </style>
+</head>
+
+<body>
+  <h6>hello world</h6>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+  <hr>
+
+  <nav>
+    <p>這裡是nav</p>
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <h6>hello world</h6>
+      <div>
+        <p>molestiae illo suscipit in!</p>
+      </div>
+    </div>
+  </nav>
+
+</body>
+
+</html>

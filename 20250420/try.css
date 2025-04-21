@@ -1,0 +1,29 @@
+/* 先讀取import合併外部代碼，再讀取下面的css樣式 */
+@import url('try02.css');
+
+/* 外部樣式表，html透過link:css拿取此份 */
+
+* {
+  font-family: arial;
+}
+
+h1,
+h2 {
+  color: red;
+  font-size: 52px;
+  background-color: black;
+}
+
+/*
+h1{
+  color:red;
+}
+h2{
+  color:green;
+} */
+
+/* p{
+  color:red;
+  font-size: 24px;
+  background-color: black;
+} */

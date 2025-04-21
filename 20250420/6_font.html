@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>文字的CSS屬性</title>
+  <style>
+    * {
+      font-family: "Roboto", "Arial", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      font-weight: Regular;
+    }
+
+    .tw {
+      font-size: 1rem;
+      /* rem:瀏覽器預設的字體大小，Chrome預設16px。r=root */
+    }
+
+    .tw .spc {
+      font-style: italic;
+      font-weight: 100;
+      background-color: lightcoral;
+    }
+
+    .en {
+      text-indent: 2rem;
+    }
+
+    .text-center {
+      text-align: center
+    }
+
+    .text-underline {
+      /* 🛑text-decoration有其他樣式可以玩 */
+      text-decoration: dotted underline 2px red;
+    }
+
+    .text-case {
+      text-transform: uppercase;
+      /*全部字大寫*/
+      /* text-transform: lowercase; */
+      /*全部字小寫*/
+      /* text-transform: capitalize; */
+      /*單字自首大寫*/
+    }
+
+    .text-shadow {
+      /* 文字可以使用複數影子 */
+      text-shadow: 2px 2px 2px aqua, -3px -2px 2px magenta;
+    }
+
+    .text-space {
+      letter-spacing: 12px;
+      /*字母間距*/
+      word-spacing: 20px;
+      /*單字間的間距，針對字跟字之間的空白作用，中英皆可使用*/
+    }
+
+    .text-overflow {
+      white-space: nowrap;
+      /*文字不換行*/
+      overflow: hidden;
+      /*超出範圍就隱藏*/
+      /* overflow-x: auto; */
+      /*超出範圍自動給予滾軸，反之就不會出現滾軸*/
+      text-overflow: ellipsis;
+      /*超出範圍的字串，句尾用...來表示*/
+    }
+
+    .twoLine {
+      /* -webkit屬性：還在試驗階段 */
+      display: -webkit-box;
+      -webkit-line-clamp: 2;/*設定最多顯示兩行文字，超出此範圍句尾會增加"..."*/
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="twoLine">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius praesentium veniam vero a id nonenim atque?
+  </h1>
+  <hr>
+  <h1 class="text-overflow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, temporibus.</h1>
+  <h1 class="text-case text-shadow text-space">Hello world</h1>
+  <h1 class="text-center text-underline">Hello world</h1>
+  <!-- 🛑再去了解em與rem的差別 -->
+  <div style="font-size: 1rem;">
+    <span>font</span>
+    <div style="font-size: 2rem;">
+      <span>font</span>
+      <div style="font-size: 3rem;"><!-- rem="整個網站最上層"的基礎設定(絕對單位)，所以這邊的rem=16px，3rem=48px -->
+        <span>font</span>
+      </div>
+    </div>
+  </div>
+  <div>===========================</div>
+  <div style="font-size: 1em;">
+    <span>font</span>
+    <div style="font-size: 2em;">
+      <span>font</span>
+      <div style="font-size: 3em;"><!-- em為相對單位，這邊的em=32px，3em=96px -->
+        <span>font</span>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p class="tw">
+    說完當天承擔鏡頭大連兄弟有限公司有所電視調節升級<span
+      class="spc">一套人士</span>，孤獨外觀節省書庫自己的醫藥走進標誌堅決患者身體一股，反覆太麻里，由此初步我來早上軟體某種心情，一本永遠改變於是唯一演員性感消息後果，聯想貨幣。
+  </p>
+  <p class="en">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, adipisci! Ratione amet adipisci quo, nobis
+    laudantium earum sint, harum saepe rerum, minima ex! Perferendis debitis tempore temporibus aliquam dignissimos,
+    dolorem porro reprehenderit velit labore consequatur quibusdam incidunt quam animi, ad autem. Quos reiciendis
+    dolores quibusdam, molestiae, nobis deserunt cum similique debitis illo molestias sint reprehenderit quod aspernatur
+    corrupti quia expedita amet tempore veritatis, praesentium harum est? Recusandae sit sint sed dignissimos itaque
+    corporis. Eaque quo vel similique nemo commodi non. Reprehenderit iste minus minima suscipit earum laborum ea
+    deserunt nulla deleniti id asperiores, aut consectetur maxime iusto quod accusantium. Quas, excepturi, maiores error
+    iusto accusantium facere sed fuga perferendis delectus corrupti quibusdam accusamus commodi laboriosam, aspernatur
+    voluptatem! Laudantium possimus pariatur quae iure incidunt quasi, harum maxime neque sequi esse voluptas mollitia,
+    corrupti natus. Illum mollitia commodi quo libero quasi illo, impedit ipsum ducimus! Esse iusto quibusdam quas
+    tempora facere commodi ab ad totam ea harum? Facilis eum incidunt optio aut earum iusto a reprehenderit
+    necessitatibus? Amet, sit ut odio quos veritatis deserunt numquam distinctio, alias delectus qui cumque!
+    Perferendis, recusandae eos cum atque explicabo sequi quo saepe consectetur similique quidem ut iusto illum
+    asperiores vero ad repellendus vitae obcaecati dolor!
+  </p>
+
+</body>
+
+</html>
