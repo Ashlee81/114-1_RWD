@@ -35,7 +35,7 @@
           <td width="100" align="right">性別:</td>
           <td>
             <input id="man" type="radio" name="gender" value="man"><label for="man"><strong>男</strong></label>
-            <!-- 下面label的包法比較好 -->
+            <!-- ‼️下面label的包法比較好。包label讓選項跟文字都可以被點選到。 -->
             <label><input type="radio" name="gender" value="woman">女</label>
             <input type="radio" name="gender" value="unknow">不提供
           </td>
@@ -55,11 +55,11 @@
         <tr>
           <td width="100" align="right">從哪得知:<td>
           <td>
-            <select name="source">
-              <option value="請選擇">請選擇</option>
+            <select name="source" align="left">
+              <option value="請選擇" selected disabled>請選擇</option>
               <option value="google">google</option>
               <option value="facebook">facebook</option>
-              <option value="friend" selected>朋友介紹</option>
+              <option value="friend">朋友介紹</option>
             </select>
           </td>
         </tr>

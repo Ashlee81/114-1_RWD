@@ -11,10 +11,21 @@
       color: red;
     }
 
-    /* nav的子元素(兒子)用"箭頭"*/
+    /* nav的子元素(兒子們)用"箭頭"*/
     /* **箭頭的權重比空格高 */
-    nav>p {
+    nav > p {
+      color: orange;
+    }
+
+    /* [使用頻率低]nav的跟屁蟲兄弟元素(同輩)只有剛好在nav後的p有效 */
+    nav + p {
       color: blue;
+      background-color: black;
+    }
+    /* [使用頻率低]nav的兄弟元素(同輩)，所有與nav同輩的p都有效 */
+    nav ~ p {
+      color: blue;
+      background-color: lightblue;
     }
 
     /* 指定"有title屬性的h6"才會吃到 */
@@ -24,6 +35,12 @@
     /* 擁有"lightblue"的h6才會吃到 */
     h6.lightblue{
       color: lightblue;
+    }
+    .example{
+      color: rgb(255, 255, 7);
+    }
+    p.example{
+      background-color: red;
     }
   </style>
 </head>
@@ -35,7 +52,8 @@
   <hr>
 
   <nav>
-    <p>這裡是nav</p>
+    <p class="example">這裡是nav的兒子p</p>
+    <p>這裡是nav的兒子p</p>
     <div>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <h6>hello world</h6>
@@ -43,7 +61,14 @@
         <p>molestiae illo suscipit in!</p>
       </div>
     </div>
+    <p>這裡是nav的兒子p</p>
   </nav>
+  <p>hello world</p>
+  <p>hello world</p>
+  <div>
+    <p>我是被div包住的p</p>
+  </div>
+  <hr>
 
 </body>
 
