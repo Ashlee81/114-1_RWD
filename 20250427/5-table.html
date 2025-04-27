@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表格</title>
+  <style>
+    table {
+      /* border: 1px solid #000; */
+      width: 500px;
+      border-spacing: 0px;
+      
+      /*將表格間的框線疊在一起*/
+      border-collapse: collapse;
+    
+      /* empty-cells: hide; 很少用*/
+
+      box-shadow: 0 0 10px #000;
+    }
+    tr {
+      background-color: lemonchiffon;
+    }
+    tr:hover{
+      background-color: lightblue;
+    }
+    td{
+      border: 5px solid #000;
+      padding: 10px;
+      /* box-shadow: inset 6px 5px 5px #f32828; */
+    }
+    td:nth-child(even) {
+      background-color: #ff0000;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td>lorem</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>lorem</td>
+      <td>lorem</td>
+    </tr>
+    <tr>
+      <td>lorem</td>
+      <td>lorem</td>
+    </tr>
+    <tr>
+      <td>lorem</td>
+      <td>lorem</td>
+    </tr>
+    <tr>
+      <td>lorem</td>
+      <td>lorem</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

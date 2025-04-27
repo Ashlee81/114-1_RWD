@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=double_arrow" />
+  <title>css清單</title>
+  <style>
+    ul.demo1 {
+      list-style-type: none;
+      /* list-style-position: inside; 此屬性較冷門 */
+    }
+
+    ol.demo2 {
+      list-style-type: disc;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+
+    /* 外部插入其他icon當項目符號的方式，🔺要重聽 🕐13:23左右 */
+
+
+    /* css巢狀寫法(有些舊瀏覽器不支援，需斟酌使用)，🔺要重聽 🕐13:35左右 */
+    ol.demo3 {
+      list-style-type: none;
+      padding-left: 15px;
+
+      li {
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          vertical-align: baseline;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+        }
+
+        &[data-status="red"]::before {
+          background-color: red;
+        }
+
+        &[data-status="green"]::before {
+          background-color: green;
+        }
+
+      }
+    }
+
+    .demo4 {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0;
+      /*用來消除inline-block後面的空白鍵*/
+
+      li {
+        display: inline-block;
+        /* ✨inline-block可以被內容撐大，所以li不用下寬高也沒關係*/
+
+        text-align: center;
+        line-height: 30px;
+        font-size: 16px;
+
+        a {
+          text-decoration: none;
+          background: lightblue;
+          color: azure;
+          display: inline-block;
+          width: 100px;
+          height: 30px;
+
+          &:hover {
+            color: black;
+            background: pink;
+          }
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ul.demo4>(li>a{$$$})*4 -->
+  <ul class="demo4">
+    <li><a href="">001</a></li>
+    <li><a href="">002</a></li>
+    <li><a href="">003</a></li>
+    <li><a href="">004</a></li>
+  </ul>
+  <span class="material-symbols-outlined">double_arrow</span>
+  <ul class="demo1">
+    <li><span class="material-symbols-outlined">double_arrow</span>001</li>
+    <li><span class="material-symbols-outlined">double_arrow</span>002</li>
+    <li><span class="material-symbols-outlined">double_arrow</span>003</li>
+    <li><span class="material-symbols-outlined">double_arrow</span>004</li>
+  </ul>
+  <ol class="demo2">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+  </ol>
+  <ol class="demo3">
+    <li data-status="red">001</li>
+    <li data-status="green">002</li>
+    <li data-status="red">003</li>
+  </ol>
+
+</body>
+
+</html>

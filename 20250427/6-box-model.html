@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>盒子模型</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .blk {
+      background: lightcoral;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+
+      padding: 10px;
+      padding-right: 20px;
+
+      /* padding: 5px 50px 10px; */
+      /*           上  左右  下 */
+
+      /* padding: 5px 50px; */
+      /*          上下 左右  */
+
+      /*margin的上下會有交疊的問題*/
+      margin: 100px auto;
+      /* margin-right: 20px; */
+
+      div& {
+        margin: 50px auto;
+      }
+      
+      h1& {
+        margin: 120px auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="blk">lorem</div>
+  <h1 class="blk">lorem</h1>
+</body>
+
+</html>
