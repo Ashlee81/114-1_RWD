@@ -9,9 +9,11 @@
     table {
       /* border: 1px solid #000; */
       width: 500px;
+
+      /* 框線彼此的距離 */
       border-spacing: 0px;
       
-      /*將表格間的框線疊在一起*/
+      /*將td間的框線疊在一起，"要下在table上才有作用"*/
       border-collapse: collapse;
     
       /* empty-cells: hide; 很少用*/
@@ -21,7 +23,7 @@
     tr {
       background-color: lemonchiffon;
     }
-    tr:hover{
+    tr:hover > td{
       background-color: lightblue;
     }
     td{

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .demo3 h5:nth-child(2n) {
+      /* color: red; */
+    }
+
+    .demo4 h5:nth-of-type(2n) {
+      color: blue;
+    }
+
+    .demo3:has(h5) {
+      color: lightcoral;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="demo4">
+    <h5>H5_01</h5>
+    <h5>H5_02 </h5>
+    <h5>H5_03 </h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h5>H5_04 </h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h5>H5_05 </h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h5>H5_06 </h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <hr>
+  <div class="demo3">
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h5>H5_01</h5>
+    <h5>H5_02 </h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h5>H5_03 </h5>
+    <h5>H5_04 </h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h5>H5_05 </h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h5>H5_06 </h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+
+</body>
+
+</html>

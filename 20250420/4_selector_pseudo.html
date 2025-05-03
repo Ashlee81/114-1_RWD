@@ -18,16 +18,16 @@
     a:visited {
       color: purple;
     }
-    
+
     /*目前較少用*/
     a:hover {
       color: red;
     }
-    
+
     a:active {
       color: green;
     }
-    
+
     /*目前較少用*/
     h1:hover {
       /* 每個元素都有hover */
@@ -65,10 +65,10 @@
       background-color: lightcyan;
     }
 
-    /* 🛑這裡要重聽，不太懂 */
-    /* h5:nth-child(2n){
-      background-color: red;
-    } */
+    p:nth-child(even) {
+      color: red;
+    }
+
     h5:nth-of-type(2n) {
       background-color: lightblue;
     }
@@ -89,7 +89,7 @@
       background-color: navy;
     }
 
-    /* has偽類選擇器，元素持有指定的後代元素或class name就會吃到 */
+    /* has偽類選擇器，元素“持有指定的後代元素或class name”，元素就會吃到 */
     .demo4 section:has(h1) {
       background-color: lightgray;
     }
@@ -119,22 +119,24 @@
   </div>
   <hr>
   <div class="demo3">
-    <h5>H5 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
+    <h5>H5_01--- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
     <p>Lorem ipsum dolor sit amet.</p>
-    <h5>H5 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
+    <h5>H5_02 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
     <p>Lorem ipsum dolor sit amet.</p>
-    <h5>H5 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
+    <h5>H5_03 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
     <p>Lorem ipsum dolor sit amet.</p>
-    <h5>H5 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
+    <h5>H5_04 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
     <p>Lorem ipsum dolor sit amet.</p>
-    <h5>H5 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
+    <h5>H5_05 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h5>H5_05 --- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, explicabo!</h5>
     <p>Lorem ipsum dolor sit amet.</p>
 
   </div>
   <hr>
   <table border="1" width="300" cellspacing="0" class="demo2">
     <tr>
-      <td>Ash1</td>
+      <td class="bbtest">Ash1</td>
       <td>Ash1</td>
     </tr>
     <tr>
@@ -143,7 +145,7 @@
     </tr>
     <tr>
       <td>Ash3</td>
-      <td>Ash3</td>
+      <td class="bbtest">Ash3</td>
     </tr>
     <tr>
       <td>Ash4</td>
@@ -156,6 +158,14 @@
     <tr>
       <td>As6</td>
       <td>As6</td>
+    </tr>
+    <tr>
+      <td>As7</td>
+      <td>As7</td>
+    </tr>
+    <tr>
+      <td>As8</td>
+      <td>As8</td>
     </tr>
   </table>
   <br>

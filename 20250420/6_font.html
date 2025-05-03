@@ -75,14 +75,44 @@
     .twoLine {
       /* -webkit屬性：還在試驗階段 */
       display: -webkit-box;
-      -webkit-line-clamp: 2;/*設定最多顯示兩行文字，超出此範圍句尾會增加"..."*/
+      line-clamp: 2;
+      /*設定最多顯示兩行文字，超出此範圍句尾會增加"..."*/
       -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .test {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 100px;
+      font-weight: 900;
+      font-style: italic;
+    }
+
+    .word-break {
+      width: 500px;
+      height: 100px;
+      border: 1px solid black;
+
+
+      /* 斷行的方式，會在字母中間斷行 */
+      /* word-break: break-all; */
+
+      /* 斷行的方式，會在單字中間斷行 */
+      word-break: break-word;
+      /* word-break: keep-all; */
       overflow: hidden;
     }
   </style>
 </head>
 
 <body>
+  <div class="word-break">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facilis voluptatem, exercitationem quos Supercalifragilisticexpialidocious
+    praesentium nemo a ipsa, non reiciendis voluptatibus vero veritatis assumenda odit dolor delectus blanditiis neque
+    aliquid nulla? Accusantium, similique beatae. Ea iusto saepe, rem nisi earum quia molestiae aliquam et quae numquam
+    nobis omnis cupiditate totam fuga?
+  </div>
+  <div class="test">hello world</div>
   <h1 class="twoLine">
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius praesentium veniam vero a id nonenim atque?
   </h1>
@@ -90,7 +120,7 @@
   <h1 class="text-overflow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, temporibus.</h1>
   <h1 class="text-case text-shadow text-space">Hello world</h1>
   <h1 class="text-center text-underline">Hello world</h1>
-  <!-- 🛑再去了解em與rem的差別 -->
+  <!-- 注意em與rem的差別 -->
   <div style="font-size: 1rem;">
     <span>font</span>
     <div style="font-size: 2rem;">
