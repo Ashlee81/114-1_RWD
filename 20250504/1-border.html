@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .blk {
+      width: 100px;
+      height: 100px;
+      background: lightgoldenrodyellow;
+      padding: 25px;
+      /* border: 1px solid black; */
+      border-right: 10px solid black;
+    }
+
+    .inline {
+      border: 1px solid red;
+    }
+    .br{
+      width: 100px;
+      height: 100px;
+      background:
+      linear-gradient(-225deg,#FFFFFF 0%,rgba(255,255,255,0) 40%,rgba(0,255,255,0) 60%,#0ff 100%),linear-gradient(45deg,#3023AE 0%,#FF0099 100%);
+      margin: 25px;
+      margin-left: auto;
+
+      border: 10px solid #000;
+      
+      /* border-radius控制四個圓角的順序:左上 ▶ 右上 ▶ 右下 ▶ 左下 */
+      /* border-radius: 50% 50% 20px 50%; */
+
+      /*用border-radius可以控制8個點的特性做怪異形狀的網站 
+      https://9elements.github.io/fancy-border-radius/full-control.html */
+      border-radius: 38% 41% 45% 29% / 38% 66% 33% 30% ;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="br">Lorem</div>
+  <hr>
+  <div class="blk">
+    <span class="inline">hello</span>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      position: relative;
+    }
+
+    section{
+      text-align: center;
+    }
+
+    div {
+      width: 200px;
+      height: 200px;
+      display: inline-block;
+      background: linear-gradient(45deg, rgb(127, 98, 255) 0%, #1437ff 100%);
+      border-radius: 10px;
+      position: relative;
+    }
+
+    section > div {
+      border: 2px solid rgb(255, 52, 211);
+      box-shadow: 0 0 10px #00308a;
+    }
+
+    .circle {
+      width: 20%;
+      height: 20%;
+      border-radius: 50%;
+      background: #fff;
+      position: absolute;
+    }
+
+    .yellow {
+      background: yellow;
+    }
+
+    .at01 {
+      top: 10%;
+      left: 10%;
+    }
+
+    .at02 {
+      top: 10%;
+      right: 10%;
+    }
+
+    .at03 {
+      top: calc(50% - 20px);
+      left: 10%;
+    }
+
+    .at04 {
+      top: calc(50% - 20px);
+      right: 10%;
+    }
+
+    .at05 {
+      bottom: 20px;
+      left: 10%;
+    }
+
+    .at06 {
+      bottom: 20px;
+      right: 10%;
+    }
+
+    .at07 {
+      top: calc(50% - 20px);
+      left: calc(50% - 20px);
+    }
+  </style>
+</head>
+
+<body>
+<section>
+
+  <div class="dice">
+    <div class="circle yellow at07"></div>
+  </div>
+  <div class="dice">
+    <div class="circle at01"></div>
+    <div class="circle at06"></div>
+  </div>
+  <div class="dice">
+    <div class="circle at01"></div>
+    <div class="circle at07"></div>
+    <div class="circle at06"></div>
+  </div>
+  <div class="dice">
+    <div class="circle at01"></div>
+    <div class="circle at02"></div>
+    <div class="circle at05"></div>
+    <div class="circle at06"></div>
+  </div>
+  <div class="dice">
+    <div class="circle at01"></div>
+    <div class="circle at02"></div>
+    <div class="circle at07"></div>
+    <div class="circle at05"></div>
+    <div class="circle at06"></div>
+  </div>
+  <div class="dice">
+    <div class="circle at01"></div>
+    <div class="circle at02"></div>
+    <div class="circle at03"></div>
+    <div class="circle at04"></div>
+    <div class="circle at05"></div>
+    <div class="circle at06"></div>
+  </div>
+</section>
+</body>
+
+</html>

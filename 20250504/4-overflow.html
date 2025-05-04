@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>overflow</title>
+  <style>
+    /* =======⏱️09:38開始講解======= */
+    .demo {
+      border: 1px solid #000;
+      background: lightblue;
+      width: 300px;
+
+      max-height: 50px;
+      overflow-y: hidden;
+
+      transition: 1s .5s;
+
+      &:hover {
+        max-height: 600px;
+        overflow-y: scroll;
+
+        transition: .5s;
+      }
+    }
+
+    .demo2 {
+      border: 1px solid #000;
+      background: lightblue;
+      width: 100px;
+      height: 100px;
+    }
+    .hide{
+      visibility: hidden;
+    }
+    .none{
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="demo2 none">不顯示該元素，抹除元素</div>
+  <div class="demo2 hide">雖看不見元素，但還是存在</div>
+  <div class="demo2">hello world</div>
+  <hr>
+  <div class="demo">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit tempora voluptates, dolorum, distinctio
+    hic laudantium atque cum suscipit reiciendis voluptate sequi facere, neque fugiat illo! Beatae id excepturi amet
+    temporibus sunt. Quisquam aspernatur impedit praesentium, animi sed dolores saepe non nisi nihil dignissimos veniam
+    voluptatem cupiditate provident odio sint officia voluptates molestiae reprehenderit sequi facilis vero in.
+    Provident rerum facilis mollitia sequi incidunt obcaecati perspiciatis labore eligendi eos soluta omnis quod,
+    repellat perferendis quas exercitationem. Aut id repellat eius ullam! Alias magni illo praesentium voluptate,
+    suscipit fugit modi eveniet molestiae sapiente sequi? Placeat soluta repellat animi, vero suscipit consequuntur
+    beatae dicta, temporibus enim quis nam dolores porro consequatur delectus, velit accusamus maiores numquam aut
+    similique est et. Enim sequi eveniet esse, reiciendis ducimus quod rerum fugiat repellat impedit cum vel quos quasi
+    provident autem tempora placeat ipsam dignissimos, minus a officiis consequuntur consequatur itaque? Dolores sit hic
+    omnis cupiditate molestias animi cum alias, eum sed dolore ratione fugit voluptas itaque porro autem sequi quidem
+    consequuntur nostrum consectetur nemo illo doloribus! Neque labore molestiae suscipit voluptatem iste ipsam illo
+    optio est voluptas doloribus id, tempore impedit deleniti reiciendis autem, eligendi atque. Hic minus labore
+    excepturi velit quibusdam quod aliquid impedit mollitia?
+  </div>
+
+</body>
+
+</html>

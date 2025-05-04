@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position</title>
+  <style>
+    /* =======⏱️10:30開始講解======= */
+    body {
+      margin: 50px;
+      padding: 50px;
+      background: #ccc;
+      border: 1px solid #ff0;
+      
+      /* flexbox 效果，使內容居中心 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* 🔺⏱️11:15左右要重聽，講解為什麼下面calc的計算邏輯 */
+      /* height: calc(100vh - 204px); */
+      position: relative;
+      
+      height: 200vh;
+    }
+    
+    .main {
+      padding: 100px;
+      background: #aaa;
+      border: 1px solid #f00;
+      position: relative;
+    }
+
+    .bigbox {
+      width: 300px;
+      border: 1px solid #000;
+      background: rgb(209, 248, 248);
+
+      /* [排列1️⃣]古早消除inline-block自動產生的4px間距的方式 */
+      /* font-size: 0; */
+
+      /* [排列2️⃣]目前主流的做法 */
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      /* font-size: 1rem; */
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      color: white;
+      background-color: darkcyan;
+      text-align: center;
+      line-height: 50px;
+    }
+
+    .relative {
+      /* =======⏱️10:40開始講解======= */
+      /* relative以元素自身目前的位置做偏移，不影響左右鄰居的排列 */
+      position: relative;
+      background: lightcoral;
+
+      /*這邊的百分比是抓父層設定的寬高*/
+      left: 100%;
+      top: 100%;
+    }
+    .absolute {
+      /* =======⏱️10:53開始講解======= */
+      /* 如果absolute的父層沒下relative，會抓取整個html做定位基準
+      父層有下relative，就會以父層的空間作為定位基準 */
+      position: absolute;
+      background: lightblue;
+      right: 0;
+      top: 0;
+    }
+
+    .fixed{
+      /* =======⏱️11:04開始講解======= */
+      /* fixed以整個html作為定位基準 */
+      position: fixed;
+      background: lightgreen;
+      left: 0;
+      bottom: 0;
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- div.bigbox>div.box{$}*20 -->
+  <div class="main">
+    <div class="bigbox">
+      <div class="box">01</div>
+      <div class="box">02</div>
+      <div class="box">03</div>
+      <div class="box">04</div>
+      <div class="box">05</div>
+      <div class="box">06</div>
+      <div class="box relative">07</div>
+      <div class="box">08</div>
+      <div class="box">09</div>
+      <div class="box absolute">10</div>
+      <div class="box">11</div>
+      <div class="box">12</div>
+      <div class="box">13</div>
+      <div class="box">14</div>
+      <div class="box">15</div>
+      <div class="box">16</div>
+      <div class="box fixed">17</div>
+      <div class="box">18</div>
+      <div class="box">19</div>
+      <div class="box">20</div>
+    </div>
+  </div>
+</body>
+
+</html>

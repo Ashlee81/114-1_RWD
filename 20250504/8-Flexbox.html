@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexbox彈性盒子</title>
+  <style>
+    /* =======⏱️15:00開始講解======= */
+    body {
+      margin: 0;
+    }
+
+    .flex-container {
+      background: lightgoldenrodyellow;
+      height: 500px;
+
+      /*彈性盒子如果沒有設定高度，子元素的高度會撐滿容器*/
+      display: flex;
+      
+      /* 🔺⏱️15:15左右要重聽，講解有哪些排列方式 */
+      /*主軸(水平方向)的對齊方式*/
+      justify-content: flex-start;
+      /*交叉軸(垂直方向)的對齊方式*/
+      align-items: center;
+
+      /*控制彈性盒子主軸的方向 */
+      flex-direction: row;
+      /*元素是否換行*/
+      flex-wrap: nowrap;
+      /* flex-flow: row wrap-reverse; */
+       /* 🔺⏱️15:30左右要重聽 */
+      align-content: space-evenly;/*子元素有兩行以上才會有作用*/
+    }
+
+    .flex-item {
+      background: lightblue;
+      border: 1px solid #000;
+      width: 100px;
+      /* height: 100px; */
+    }
+    .special-item{
+      /* 控制單一個子元素的對齊方式 */
+      align-self: flex-start;
+      /* 控制子元素的順序，數字越大越往end跑，數字越小越往start跑 */
+      order: 10;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="flex-container">
+    <div class="flex-item">A Lorem ipsum dolor sit amet consectetur.</div>
+    <div class="flex-item">B</div>
+    <div class="flex-item">C</div>
+    <div class="flex-item">D</div>
+    <div class="flex-item special-item">E special</div>
+    <div class="flex-item">F</div>
+    <div class="flex-item">G</div>
+    <div class="flex-item">H</div>
+    <div class="flex-item">I</div>
+    <div class="flex-item">J</div>
+    <div class="flex-item">K</div>
+    <!-- <div class="flex-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nemo architecto, libero nihil laborum tempore facilis! Saepe odio, impedit itaque voluptate ducimus ut, quas tempora vero ea esse, harum nulla.</div> -->
+  </section>
+
+</body>
+
+</html>

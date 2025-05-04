@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 500px;
+      background: #000;
+    }
+    p{
+      height: 30px;
+      background: lightblue;
+      /* 🔺⏱️9:05左右要重聽，探討auto會如何去計算 */
+
+      &.demo1{
+        width: 100px;
+        margin-left: auto;
+        margin-right: 100px;
+      }
+      &.demo2{
+        width: 100px;
+        margin-left: auto;
+        margin-right: 100px;
+      }
+      &.demo3{
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+      &.demo4{
+        width: 300px;
+        margin-left: auto;
+        margin-right: 100px;
+      }
+      &.demo5{
+        
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <!-- p段落預設有margin -->
+    <p class="demo1">demo1</p>
+    <p class="demo2">demo2</p>
+    <p class="demo3">demo3</p>
+    <p class="demo4">demo4</p>
+    <p class="demo5">demo5</p>
+  </div>
+  
+</body>
+</html>

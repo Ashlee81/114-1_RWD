@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* =======⏱️09:18開始講解======= */
+
+    * ,
+    *::before,
+    *::after {
+      /* ⏱️9:35左右
+      border-box將border作為box的邊界,較沒有元素因為有padding而溢出盒子的問題 */
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    div {
+
+      padding: 20px;
+      background: lightcoral;
+
+      /* 🔺⏱️9:25左右要重聽
+      寬設定100%在RWD時會有問題，要是有padding時不會自動扣除，會產生scroll bar */
+      /* width: 100%; */
+      width: auto;
+
+      max-width: 600px;
+      min-width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="demo1">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque distinctio soluta dolorem quae
+    voluptate ad earum sequi, possimus voluptatibus, libero deleniti. Excepturi error rerum sunt voluptates culpa itaque
+    magnam earum similique dicta repellendus soluta explicabo quod cumque exercitationem beatae architecto, aliquid
+    eaque. Rem, debitis consequuntur ea, minima laudantium aut autem quae cupiditate mollitia dignissimos, ad
+    repellendus porro veniam incidunt! Nam quo odio ad inventore magni quidem. Tempora, fuga! Facere odit quae suscipit
+    saepe, quo consectetur a necessitatibus id cumque cum ratione porro, velit, voluptas consequuntur! Earum, quidem.
+    Veritatis obcaecati libero magnam qui cum veniam perferendis? Alias, fugit sequi. Libero, sed.
+  </div>
+
+</body>
+
+</html>

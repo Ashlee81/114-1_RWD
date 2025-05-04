@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* =======⏱️11:23開始講解======= */
+
+    .main {
+      background: lightblue;
+      width: 500px;
+      height: 500px;
+      position: relative;
+
+      .box {
+        background: lightcoral;
+        width: 100px;
+        height: 100px;
+
+        position: absolute;
+
+        /* [1️⃣]讓元素在畫面中心的方式 */
+        /* left: calc(50% - 50px); */
+        /* top: calc(50% - 50px); */
+
+        /* [2️⃣]讓元素在畫面中心的方式 */
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* 現在都用flexbox解決排版問題，所以很少用了 */
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="box"></div>
+  </div>
+
+</body>
+
+</html>

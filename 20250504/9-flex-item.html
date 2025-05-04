@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* =======⏱️16:00開始講解======= */
+    .flex-container {
+      height: 500px;
+      background: lightgreen;
+      display: flex;
+    }
+    .flex-item{
+      background: lightblue;
+      border: 1px solid #000;
+      width: 100px;
+      height: 100px;
+
+      /* flex個別空間參數 */
+      /* flex-grow: 0; 膨脹係數
+      flex-shrink: 1; 收縮空間
+      flex-basis: auto; 基本空間，可與shrink grow同時存在🔺需要確定一下*/
+      flex:0 1 auto;
+
+      &.c{
+        background: lightcoral;
+        /* flex-grow: 1; */
+        flex-shrink: 2;
+        flex-basis: 50px;
+      }
+      &.e{
+        background: lightcoral;
+        /* flex-grow: 2; */
+        /* flex-shrink: 0; */
+        flex-basis: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="flex-container">
+    <div class="flex-item a">A</div>
+    <div class="flex-item b">B</div>
+    <div class="flex-item c">C</div>
+    <div class="flex-item d">D</div>
+    <div class="flex-item e">E</div>
+    <div class="flex-item f">F</div>
+  </section>
+  
+</body>
+</html>
