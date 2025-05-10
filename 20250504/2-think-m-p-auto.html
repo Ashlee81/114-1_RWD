@@ -12,7 +12,8 @@
     p{
       height: 30px;
       background: lightblue;
-      /* 🔺⏱️9:05左右要重聽，探討auto會如何去計算 */
+      /* 🔺⏱️9:05左右要重聽，探討auto會如何去計算
+      ✅20250507已聽完 */
 
       &.demo1{
         width: 100px;
@@ -21,27 +22,32 @@
       }
       &.demo2{
         width: 100px;
-        margin-left: auto;
+        margin-left: 100px;
         margin-right: 100px;
+        background-color: yellow;
       }
       &.demo3{
         margin-left: 100px;
         margin-right: 100px;
+        background-color:lightcoral;
       }
       &.demo4{
         width: 300px;
         margin-left: auto;
-        margin-right: 100px;
+        margin-right: auto;
+        background: darkcyan;
       }
       &.demo5{
-        
+        width: auto;/* 寬度與margin都設為auto的情況下，會以寬度為優先 */
+        margin-left: auto;
+        margin-right: 100px;
       }
     }
   </style>
 </head>
 <body>
   <div>
-    <!-- p段落預設有margin -->
+    <!-- ⭐️p段落預設有margin -->
     <p class="demo1">demo1</p>
     <p class="demo2">demo2</p>
     <p class="demo3">demo3</p>

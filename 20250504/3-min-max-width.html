@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>min&max width</title>
   <style>
     /* =======⏱️09:18開始講解======= */
 
     * ,
     *::before,
     *::after {
-      /* ⏱️9:35左右
-      border-box將border作為box的邊界,較沒有元素因為有padding而溢出盒子的問題 */
+      /* ⏱️9:30左右
+      border-box將border作為box的邊界,就可以解決元素因為有設padding或border而溢出視窗的問題 */
       box-sizing: border-box;
     }
 
@@ -25,13 +25,16 @@
       padding: 20px;
       background: lightcoral;
 
-      /* 🔺⏱️9:25左右要重聽
-      寬設定100%在RWD時會有問題，要是有padding時不會自動扣除，會產生scroll bar */
-      /* width: 100%; */
-      width: auto;
+      /* 🔺⏱️9:25左右要重聽✅20250507已聽
 
-      max-width: 600px;
-      min-width: 400px;
+      寬設定100%在RWD時會有問題，寬100%會抓取視窗的寬度數值套入"內容區域"。
+      如果有另外設定padding值，會因整體溢出視窗範圍
+      產生scroll bar */
+      width: 100%;
+      border: 10px solid #000;
+
+      max-width: 500px;
+      min-width: 300px;
     }
   </style>
 </head>

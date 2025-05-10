@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    .flex-container {
+      background: lightgoldenrodyellow;
+      height: 500px;
+
+      display: flex;
+      
+      justify-content: space-evenly;
+      /* align-items: center; */
+
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: space-evenly;
+    }
+
+    .flex-item {
+      background: lightblue;
+      border: 1px solid #000;
+      width: 100px;
+      /* height: 100px; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .special-item{
+      align-self: flex-end;
+      order: 10;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="flex-container">
+    <div class="flex-item">A Lorem ipsum dolor sit amet consectetur.</div>
+    <div class="flex-item">B</div>
+    <div class="flex-item">C</div>
+    <div class="flex-item">D</div>
+    <div class="flex-item special-item">E special</div>
+    <div class="flex-item">F</div>
+    <div class="flex-item">G</div>
+    <div class="flex-item">H</div>
+    <div class="flex-item">I</div>
+    <div class="flex-item">J</div>
+    <div class="flex-item">K</div>
+  </section>
+
+</body>
+</html>
