@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* =======⏱️14:40開始講解======= */
+    body {
+      margin: 0;
+      background: #333;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .base {
+      width: 100px;
+      height: 100px;
+      background: lightgreen;
+      position: relative;
+      animation: demo1 4s cubic-bezier(0.61, -0.53, 0.31, 1.64) infinite;
+
+      /* 
+      animation-name: demo1; 動畫名稱
+      animation-duration: 2000ms; 動畫跑的時間
+      animation-timing-function: linear; 速度曲線
+      animation-delay: 0ms; 延遲時間
+      animation-iteration-count: infinite; 重複次數
+      animation-direction: alternate; 動畫方向
+      animation-fill-mode: none; 動畫結束後是否停留在最後一幀
+       */
+    }
+
+    @keyframes demo1 {
+
+      0%,
+      100% {
+        background: red;
+        left: -300px;
+      }
+
+      25%,
+      75% {
+        background: purple;
+        filter: blur(5px);
+        transform: scale(1.5,0.1);
+      }
+      
+      50% {
+        background: yellow;
+        left: 300px;
+        filter: blur(0);
+        transform: scale(1);
+      }
+    }
+
+    .button {
+      width: 100px;
+      height: 50px;
+      border-radius: 5px;
+      background: orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        /*🔺⏱️15:35左右觀念需複習 
+        ⭐偽元素本身為inline,但對它下position: absolute;就會變成block
+        ⭐被flex包住的inline會變成block */
+        content: '';
+        position: absolute;
+        width: 300%;
+        height: 300%;
+        background: linear-gradient(145deg, transparent 40%, white 50%, transparent 60%);
+        opacity: 0.5;
+        /* border: 1px solid red; */
+        animation: demo2 1.5s linear infinite;
+      }
+    }
+
+    @keyframes demo2 {
+      0% {
+        transform: translate(-50%, -50%);
+      }
+
+      100% {
+        transform: translate(50%, 50%);
+      }
+    }
+
+    /* button {
+      width: 100px;
+      height: 50px;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      background: orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    } */
+    /* ⭐https://caniuse.com/ 可查詢css屬性在不同瀏覽器支援的情況，比mdn精準 */
+    /* 
+    ======自己做的=========
+    .loading {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: -30px;
+        width: 400px;
+        height: 20px;
+        border: 1px solid white;
+      }
+
+      &::before {
+        background: red;
+        animation: loading 4s linear infinite;
+      }
+    }
+
+    @keyframes loading {
+      0% {
+        transform: scale(0, 1);
+        transform-origin: left;
+      }
+
+      100% {
+        transform: scale(1, 1);
+      }
+    } */
+    .loading {
+      position: relative;
+      width: 300px;
+      text-align: center;
+      padding-top: 40px;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        box-sizing: border-box;
+        width: 300px;
+        border: 1px solid white;
+        bottom: 20px;
+        left: 0;
+        top: 0;
+        height: 20px;
+      }
+
+      &::before {
+        background: red;
+        width: 0px;
+        opacity: 0.5;
+        animation: loading 5s linear infinite;
+      }
+    }
+
+    /* ⭐@keyframe不能被包在偽元素中 */
+    @keyframes loading {
+      0% {
+        width: 0%;
+      }
+
+      25%,
+      75% {
+        background: red;
+      }
+
+      0%,
+      50% {
+        background: darkred;
+      }
+
+      100% {
+        width: 100%;
+        background: transparent;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="base">hello world</div>
+  <div class="button">button</div>
+  <div class="loading">loading</div>
+  <!-- <button>button</button> -->
+</body>
+
+</html>

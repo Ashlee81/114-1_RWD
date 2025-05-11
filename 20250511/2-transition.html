@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>轉場</title>
+  <style>
+    /* =======⏱️13:15開始講解======= */
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.before {
+        background: lightcoral;
+      }
+
+      &.after {
+        background: lightblue;
+        transition: width .5s linear;
+
+        /* transition-property: all; 可以指定只要哪個屬性作轉場 ex:width
+        transition-duration: .5s; 動畫總時長
+        transition-delay: 0s; 動畫延遲幾秒後觸發
+        transition-timing-function: ease-in-out; 速度曲線
+        */
+
+        &:hover {
+          /* font-size: 1.5rem;
+          background: darkcyan;
+          transform:scale(1.5);
+          opacity:0; */
+          width: 1200px;
+          font-size: 3rem;
+        }
+      }
+
+      &.static {
+        background-color: lightcoral;
+        opacity: 0.3;
+        transition: all 1s;
+        transition: opcity 1s, background-color 0.2s;
+
+        &:hover {
+          background-color: darkcyan;
+          opacity: 1;
+        }
+      }
+
+      &.transition {
+        background: lightblue;
+      }
+
+      &.multiTrans {
+        background: lightgray;
+        transition: all 5s;
+        position: relative;
+
+
+        &::after {
+          transition: all 1s;
+
+          content: 'multiTrans';
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          background: darkcyan;
+          transform-origin: right bottom;
+          /*==================================*/
+          transition: opacity .5s, top .5s .5s, transform .5s 1s;
+          position: absolute;
+          opacity: 0;
+          top: 0;
+        }
+
+        &:hover::after {
+          /* transform: translate(0,100%) rotate(90deg); ⏱️14:00🔺需複習*/
+          opacity: 1;
+          top: 100%;
+          transform: rotate(90deg);
+        }
+
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box static">Before</div>
+  <div class="box transition">After</div>
+  <div class="box multiTrans">After</div>
+</body>
+
+</html>
