@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" media="screen" href="screen-rule.css"> -->
+  <link rel="stylesheet" media="print" href="print-rule.css">
+  <style>
+    /* =======⏱️9:15開始講解======= */
+    /*🔺⏱️9:25左右觀念需複習 */
+    div {
+      width: 100px;
+      height: 100px;
+      color: white;
+    }
+
+    .wow-screen {
+      background: red;
+    }
+
+    .wow-print {
+      background: blue;
+    }
+
+    /* @media screen {
+      在螢幕模式時會套用這裡面的css
+      .wow-print {
+        display: none;
+      }
+    } */
+
+    /* @media print {
+      在列印模式時會套用這裡面的css
+      .wow-screen{
+        display: none;
+      }
+    } */
+  </style>
+</head>
+
+<body>
+  <div class="wow-screen">WOW screen</div>
+  <div class="wow-print">WOW print</div>
+
+</body>
+
+</html>

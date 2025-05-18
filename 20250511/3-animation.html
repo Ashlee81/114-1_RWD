@@ -13,10 +13,23 @@
       color: white;
       height: 100vh;
       display: flex;
-      flex-direction: column;
+      
+      flex-wrap: wrap;
       justify-content: space-around;
       align-items: center;
+      
+      .col {
+        /*🔺⏱️0518 9:00左右觀念需複習,講解flex box的空間分配 */
+        flex: 1 1 auto;
+        height: 50%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
+
+
 
     .base {
       width: 100px;
@@ -48,9 +61,9 @@
       75% {
         background: purple;
         filter: blur(5px);
-        transform: scale(1.5,0.1);
+        transform: scale(1.5, 0.1);
       }
-      
+
       50% {
         background: yellow;
         left: 300px;
@@ -192,14 +205,66 @@
         background: transparent;
       }
     }
+
+    .rgb {
+      box-sizing: border-box;
+      font-size: 5rem;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.5rem;
+      border: 2px solid #fff;
+      padding: 4px 0px 0px 20px;
+
+      animation: demo4_text 3s linear infinite, demo4_box 3s linear infinite;
+    }
+
+    @keyframes demo4_text {
+
+      0%,
+      100% {
+        text-shadow: 0 0 1rem #ff0000ff, 0 0 5rem #ff0000ff;
+      }
+
+      33% {
+        text-shadow: 0 0 1rem rgb(30, 255, 0), 0 0 5rem rgb(30, 255, 0);
+      }
+
+      66% {
+        text-shadow: 0 0 1rem rgb(251, 255, 0), 0 0 5rem rgb(251, 255, 0);
+      }
+    }
+
+    @keyframes demo4_box {
+
+      0%,
+      100% {
+        box-shadow: 0 0 1rem orange, 0 0 1rem orange inset;
+      }
+
+      33% {
+        box-shadow: 0 0 1rem rgb(0, 162, 255), 0 0 1rem rgb(0, 162, 255) inset;
+      }
+
+      66% {
+        box-shadow: 0 0 1rem rgb(125, 11, 255), 0 0 1rem rgb(125, 11, 255) inset;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div class="base">hello world</div>
-  <div class="button">button</div>
-  <div class="loading">loading</div>
-  <!-- <button>button</button> -->
+  <div class="col">
+    <div class="base">hello world</div>
+  </div>
+  <div class="col">
+    <div class="button">button</div>
+  </div>
+  <div class="col">
+    <div class="loading">loading</div>
+  </div>
+  <div class="col">
+    <div class="rgb">wow</div>
+  </div>
 </body>
 
 </html>
