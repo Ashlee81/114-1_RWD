@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS變數</title>
+  <style>
+    /* =======⏱️10:10開始講解======= */
+    :root {
+      /* 全域變數 */
+
+      /* 變數名稱固定使用「--」作為開頭 */
+      --primary-color: lightyellow;
+      --text-color: #333;
+      --main-size: 20px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--primary-color);
+    }
+
+    .box {
+      --primary-color: red;/*⭐可在單一class中改掉變數內容 */
+      background: var(--primary-color);
+      border: 1px solid #000;
+      ;
+      width: 200px;
+      height: 200px;
+    }
+
+    .alert {
+      color: var(--text-color);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box" style="--primary-color: blue;"></div>
+  <div class="alert">這是alert</div>
+  <h1 style="color: var(--text-color);">hello world</h1>
+
+</body>
+
+</html>
