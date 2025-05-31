@@ -14,3 +14,8 @@ body {
     filter: grayscale(50%) sepia(20%);
   }
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+  font-size: 2rem;
+}
