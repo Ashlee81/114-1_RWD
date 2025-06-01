@@ -13,22 +13,50 @@
   <!-- bootstrap插件 -->
   <link rel="stylesheet" href="./plugin/bootstrap.css">
   <script src="./plugin/bootstrap.bundle.min.js"></script>
-  <!-- 自訂的css -->
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css'
-    integrity='sha512-GmZYQ9SKTnOea030Tbiat0Y+jhnYLIpsGAe6QTnToi8hI2nNbVMETHeK4wm4MuYMQdrc38x+sX77+kVD01eNsQ=='
-    crossorigin='anonymous' />
+  <!-- =============自訂的css================= -->
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css"
+    integrity="sha512-GmZYQ9SKTnOea030Tbiat0Y+jhnYLIpsGAe6QTnToi8hI2nNbVMETHeK4wm4MuYMQdrc38x+sX77+kVD01eNsQ=="
+    crossorigin="anonymous" />
+  <!-- google font -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_right" />
 
   <link rel="stylesheet" href="./plugin/style.css">
-  <style>
-
-  </style>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#wowNav">
+  
+  <!-- ==============選單============== -->
+  <nav id="wowMenu" class="navbar navbar-expand-md bg-gradient position-fixed top-0 w-100" data-bs-theme="dark" style="--bs-gradient: linear-gradient(90deg, #6a11cb, #2575fc);">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512">
+          <path fill="#B197FC"
+            d="M377 52c11-13.8 8.8-33.9-5-45s-33.9-8.8-45 5L288 60.8 249 12c-11-13.8-31.2-16-45-5s-16 31.2-5 45l48 60L12.3 405.4C4.3 415.4 0 427.7 0 440.4L0 464c0 26.5 21.5 48 48 48l240 0 240 0c26.5 0 48-21.5 48-48l0-23.6c0-12.7-4.3-25.1-12.3-35L329 112l48-60zM288 448l-119.5 0L288 291.7 407.5 448 288 448z" />
+        </svg>
+        <span>WOW渡假村</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#wowNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="wowNav">
+        <nav class="navbar-nav ms-auto my-3 my-mb-0 gap-2 gap-xl-5">
+          <a class="nav-link" href="#wowPallet">營位介紹</a>
+          <a class="nav-link" href="#wowPark">探索體驗</a>
+          <a class="nav-link" href="#wowService">遊客服務</a>
+          <a class="nav-link" href="#wowRule">營區守則</a>
+          <a class="nav-link" href="#wowContact">聯絡我們</a>
+        </nav>
+      </div>
+    </div>
+  </nav>
   <!-- bs Components➡️Components 輪播圖 -->
   <!-- 📌自行微調語意標籤 -->
-  <section id="wowSlider" class="carousel slide carousel-fade">
-    <div class="carousel-indicators">
+  <!-- ==============輪播圖============== -->
+  <section id="wowSlider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-indicators gap-2">
       <button type="button" data-bs-target="#wowSlider" data-bs-slide-to="0" class="active"></button>
       <button type="button" data-bs-target="#wowSlider" data-bs-slide-to="1"></button>
       <button type="button" data-bs-target="#wowSlider" data-bs-slide-to="2"></button>
@@ -36,34 +64,141 @@
     <div class="carousel-inner">
       <div class="carousel-item vh-100 active">
         <img src="https://picsum.photos/1920/1080/?random=10" class="d-block w-100 h-100 object-fit-cover">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
+        <div class="carousel-caption d-flex flex-column align-items-start">
+          <h5 class="h1">
+            <span class="badge text-bg-primary">山間</span>
+            <span class="badge text-bg-warning">芬多精</span>
+          </h5>
+
+          <h2 class="display-1 fw-bolder text-start">山間溫泉</h2>
+          <p class="d-none d-md-block">Some representative placeholder content for the first slide.</p>
         </div>
       </div>
       <div class="carousel-item vh-100">
         <img src="https://picsum.photos/1920/1080/?random=11" class="d-block w-100 h-100 object-fit-cover">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
+        <div class="carousel-caption d-flex flex-column align-items-start">
+          <h5 class="h1">
+            <span class="badge text-bg-primary">海景</span>
+            <span class="badge text-bg-warning">沙灘</span>
+          </h5>
+
+          <h2 class="display-1 fw-bolder text-start">海景第一排</h2>
+          <p class="d-none d-md-block">Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item vh-100">
         <img src="https://picsum.photos/1920/1080/?random=12" class="d-block w-100 h-100 object-fit-cover">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+        <div class="carousel-caption d-flex flex-column align-items-start">
+          <h5 class="h1">
+            <span class="badge text-bg-primary">山丘</span>
+            <span class="badge text-bg-warning">徒步健行</span>
+          </h5>
+          <h2 class="display-1 fw-bolder text-start">接近大自然</h2>
+          <p class="d-none d-md-block">Some representative placeholder content for the third slide.</p>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#wowSlider" data-bs-slide="prev">
-      <span class="fa-solid fa-circle-chevron-left"></span>
+    <button class="d-none d-md-block carousel-control-prev w-auto" type="button" data-bs-target="#wowSlider"
+      data-bs-slide="prev">
+      <i class="d-none d-md-block fa-solid fa-circle-chevron-left" alt="大螢幕箭頭"></i>
+      <i class="d-md-none fa-solid fa-chevron-left" alt="小螢幕箭頭"></i>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#wowSlider" data-bs-slide="next">
-      <span class="fa-solid fa-circle-chevron-right"></span>
+    <button class="d-none d-md-block carousel-control-next w-auto" type="button" data-bs-target="#wowSlider"
+      data-bs-slide="next">
+      <i class="d-none d-md-block fa-solid fa-circle-chevron-right" alt="大螢幕箭頭"></i>
+      <i class="d-md-none fa-solid fa-chevron-right" alt="小螢幕箭頭"></i>
     </button>
-    <!-- <i class="fa-solid fa-circle-chevron-right"></i> -->
   </section>
+  <!-- ==============營位介紹============== -->
+  <section id="wowPallet" class="container py-5">
+    <div class="row row-cols-2 row-cols-md-4 g-0 mt-5">
+      <img class="col object-fit-cover" src="https://picsum.photos/300/300/?random=1">
+      <img class="col object-fit-cover" src="https://picsum.photos/300/300/?random=2">
+      <img class="col object-fit-cover" src="https://picsum.photos/300/300/?random=3">
+      <img class="col object-fit-cover" src="https://picsum.photos/300/300/?random=4">
+    </div>
+    <header class="h2 border-start border-5 border-warning ps-4 my-5">營位介紹</header>
+    <article class="row row-cols-1 row-cols-md-2 g-5 flex-row-reverse">
+      <div class="col">
+        <div class="card bg-dark text-white overflow-hidden">
+          <img class="card-img" src="https://picsum.photos/800/600/?random=1">
+          <div
+            class="card-img-overlay bg-dark bg-opacity-50 d-flex flex-column justify-content-center align-items-center text-center">
+            <h3 class="card-title fw-bolder">河畔 × A區</h3>
+            <ul class="list-unstyled">
+              <li>每帳空間4X8公尺，獨立水槽與供電，共20帳</li>
+              <li>帳邊可停車！每帳限1台車，超過酌收至指定停車場費用 $100/車</li>
+              <li>每帳限四人，超出費用（五歲以上）酌收人頭費 $300</li>
+            </ul>
+            <h4 class="card-text">
+              <!-- 📌改成label語意標籤 -->
+              <label class="badge rounded-pill text-bg-light">$1500/晚</label>
+              <label class="badge rounded-pill text-bg-dark">$800/夜衝</label>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-dark text-white overflow-hidden">
+          <img class="card-img" src="https://picsum.photos/800/600/?random=2">
+          <div
+            class="card-img-overlay bg-dark bg-opacity-50 d-flex flex-column justify-content-center align-items-center text-center">
+            <h3 class="card-title fw-bolder">河畔 × B區</h3>
+            <ul class="list-unstyled">
+              <li>每帳空間4X8公尺，獨立水槽與供電，共20帳</li>
+              <li>帳邊可停車！每帳限1台車，超過酌收至指定停車場費用 $100/車</li>
+              <li>每帳限四人，超出費用（五歲以上）酌收人頭費 $300</li>
+            </ul>
+            <h4 class="card-text">
+              <!-- 📌改成label語意標籤 -->
+              <label class="badge rounded-pill text-bg-light">$1500/晚</label>
+              <label class="badge rounded-pill text-bg-dark">$800/夜衝</label>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-dark text-white overflow-hidden">
+          <img class="card-img" src="https://picsum.photos/800/600/?random=3">
+          <div
+            class="card-img-overlay bg-dark bg-opacity-50 d-flex flex-column justify-content-center align-items-center text-center">
+            <h3 class="card-title fw-bolder">河畔 × C區</h3>
+            <ul class="list-unstyled">
+              <li>每帳空間4X8公尺，獨立水槽與供電，共20帳</li>
+              <li>帳邊可停車！每帳限1台車，超過酌收至指定停車場費用 $100/車</li>
+              <li>每帳限四人，超出費用（五歲以上）酌收人頭費 $300</li>
+            </ul>
+            <h4 class="card-text">
+              <!-- 📌改成label語意標籤 -->
+              <label class="badge rounded-pill text-bg-light">$1500/晚</label>
+              <label class="badge rounded-pill text-bg-dark">$800/夜衝</label>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-dark text-white overflow-hidden">
+          <img class="card-img" src="https://picsum.photos/800/600/?random=4">
+          <div
+            class="card-img-overlay bg-dark bg-opacity-50 d-flex flex-column justify-content-center align-items-center text-center">
+            <h3 class="card-title fw-bolder">河畔 × D區</h3>
+            <ul class="list-unstyled">
+              <li>每帳空間4X8公尺，獨立水槽與供電，共20帳</li>
+              <li>帳邊可停車！每帳限1台車，超過酌收至指定停車場費用 $100/車</li>
+              <li>每帳限四人，超出費用（五歲以上）酌收人頭費 $300</li>
+            </ul>
+            <h4 class="card-text">
+              <!-- 📌改成label語意標籤 -->
+              <label class="badge rounded-pill text-bg-light">$1500/晚</label>
+              <label class="badge rounded-pill text-bg-dark">$800/夜衝</label>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </section>
+
 
 </body>
 

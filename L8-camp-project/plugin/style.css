@@ -3,19 +3,151 @@
 /* 此為套用google font字型 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
-  font-family: 'roboto', 'Noto Sans TC', 'Open Sans', sans-serif;
-  background: #eee;
+:root {
+  --primary-dark: #333;
+  --primary-white: #eee;
+  --primary-gray: #868686;
 }
 
+body {
+  font-family: 'roboto', 'Noto Sans TC', 'Open Sans', sans-serif;
+  background: var(--primary-dark);
+  color: var(--primary-white);
+}
+
+/* =============logo============= */
+#wowMenu {
+  z-index: 999;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* =========⭐選單下底線試做========= */
+  .nav-link {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 3px;
+      width: 0px;
+      background: var(--primary-white);
+      left: 5px;
+      bottom: 0;
+      opacity: 0;
+      transition: .3s ease-in-out;
+    }
+
+    &:hover::after {
+      width: 70px;
+      opacity: 1;
+    }
+    &:active::after {
+      width: 70px;
+      opacity: 1;
+    }
+  }
+}
+
+/* ===========輪播區============== */
 #wowSlider {
+  .carousel-indicators {
+    button {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+    }
+  }
+
   img {
     /*在圖片上加灰調、黃調濾鏡*/
     filter: grayscale(50%) sepia(20%);
   }
+
+  /* -----按鈕----- */
+  button i {
+
+    /* background: #000;
+  width: 50px;
+  height: 50px;
+  line-height: 50px; */
+
+    &.fa-circle-chevron-right,
+    &.fa-circle-chevron-left {
+      font-size: 2.5rem;
+    }
+
+    &.fa-chevron-right,
+    &.fa-chevron-left {
+      font-size: 1.5rem;
+    }
+  }
+
+  .carousel-caption {
+    padding-bottom: 150px;
+    z-index: 1;
+    /* 🚨carousel-item::after與carousel-caption是同層級嗎?*/
+
+    h2 {
+      background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(to bottom, var(--primary-white)50%, var(--primary-gray)50%);
+    }
+  }
+
+  .carousel-item {
+    padding-bottom: 250px;
+    background: var(--primary-dark);
+  }
+
+  .carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: url('../media/line.svg');
+    opacity: 0.5;
+  }
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  font-size: 2rem;
+
+
+@media (min-width:768px) {
+  #wowPallet {
+
+    /* 階梯式排版 */
+    article {
+      padding-top: 280px;
+
+      .col:nth-child(odd) {
+        transform: translateY(-50%);
+      }
+    }
+
+
+    .card-img-overlay {
+      transform: scale(0);
+      transition: .5s ease-in-out;
+    }
+
+    .card-img {
+      transform: scale(1);
+      transition: .5s ease-in-out;
+    }
+
+    .card:hover {
+      .card-img-overlay {
+        transform: scale(1);
+      }
+
+      .card-img {
+        transform: scale(1.2);
+      }
+    }
+  }
 }
