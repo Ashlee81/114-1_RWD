@@ -24,7 +24,7 @@ body {
     height: 20px;
   }
 
-  /* =========⭐選單下底線試做========= */
+  /* =========⭐選單下底線========= */
   .nav-link {
     position: relative;
 
@@ -34,19 +34,21 @@ body {
       height: 3px;
       width: 0px;
       background: var(--primary-white);
-      left: 5px;
+      left: 0;
       bottom: 0;
       opacity: 0;
       transition: .3s ease-in-out;
     }
 
     &:hover::after {
-      width: 70px;
+      width: 100%;
       opacity: 1;
     }
-    &:active::after {
-      width: 70px;
+
+    &.active::after {
+      width: 100%;
       opacity: 1;
+      background: yellow;
     }
   }
 }
@@ -115,10 +117,57 @@ body {
   }
 }
 
+#wowPark {
+  background: url('https://picsum.photos/1920/1080/?random=11') rgb(167, 167, 167) no-repeat center/cover fixed;
+  background-blend-mode: multiply;
+  /*背景圖的混色屬性，需搭配bg中的色票使用*/
+}
+
+#wowService {
+  background: url('https://picsum.photos/1920/1080/?random=11') rgb(58, 58, 58) no-repeat center/cover fixed;
+  background-blend-mode: multiply;
+  /*背景圖的混色屬性，需搭配bg中的色票使用*/
+}
+#wowContact {
+  background: url("https://picsum.photos/1920/1080/?random=10") #000 no-repeat center/cover;
+  background-attachment: fixed;
+  background-blend-mode: luminosity;
+}
+
+#wowContact #ff-compose {
+  padding-top: 120px;
+}
+
+#wowContact .ff-form {
+  backdrop-filter: blur(10px);
+  background: rgb(46, 43, 98, 0.5);
+  border-radius: 5px;
+}
+
+#wowContact #ff-title-root {
+  margin: 3rem 0;
+  border-left: 5px solid rgb(255, 193, 7);
+  font-size: 2rem;
+  padding: 0 0 0 1rem;
+}
+
 
 
 @media (min-width:768px) {
   #wowPallet {
+
+    .gallery-pic {
+      filter: brightness(0.7);
+      transform: scale(1);
+      transition: .5s ease-in-out;
+
+      &:hover {
+        filter: brightness(1);
+        background: #000;
+        transform: scale(1.1);
+        z-index: 1;
+      }
+    }
 
     /* 階梯式排版 */
     article {
@@ -147,6 +196,26 @@ body {
 
       .card-img {
         transform: scale(1.2);
+      }
+    }
+  }
+
+  #wowPark {
+    .col {
+      transition: .5s ease-in-out;
+
+      .card-img {
+        filter: brightness(0.7);
+        transition: .3s ease-in-out;
+      }
+
+      &:hover {
+        z-index: 10;
+        transform: scale(1.1);
+
+        .card-img {
+          filter: brightness(1);
+        }
       }
     }
   }

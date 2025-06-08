@@ -13,6 +13,7 @@
   <!-- bootstrap插件 -->
   <link rel="stylesheet" href="./plugin/bootstrap.css">
   <script src="./plugin/bootstrap.bundle.min.js"></script>
+  <script src="./plugin/masonry.pkgd.min.js"></script>
   <!-- =============自訂的css================= -->
   <!-- font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css"
@@ -23,16 +24,18 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_right" />
 
   <link rel="stylesheet" href="./plugin/style.css">
+  <!-- =============自訂的JS================= -->
+  <script src="./plugin/csotumer.js"></script>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#wowNav">
-  
+
   <!-- ==============選單============== -->
-  <nav id="wowMenu" class="navbar navbar-expand-md bg-gradient position-fixed top-0 w-100" data-bs-theme="dark" style="--bs-gradient: linear-gradient(90deg, #6a11cb, #2575fc);">
+  <nav id="wowMenu" class="navbar navbar-expand-md bg-gradient position-fixed top-0 w-100" data-bs-theme="dark"
+    style="--bs-gradient: linear-gradient(90deg, #6a11cb, #2575fc);">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <svg xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 576 512">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
           <path fill="#B197FC"
             d="M377 52c11-13.8 8.8-33.9-5-45s-33.9-8.8-45 5L288 60.8 249 12c-11-13.8-31.2-16-45-5s-16 31.2-5 45l48 60L12.3 405.4C4.3 415.4 0 427.7 0 440.4L0 464c0 26.5 21.5 48 48 48l240 0 240 0c26.5 0 48-21.5 48-48l0-23.6c0-12.7-4.3-25.1-12.3-35L329 112l48-60zM288 448l-119.5 0L288 291.7 407.5 448 288 448z" />
         </svg>
@@ -112,10 +115,10 @@
   <!-- ==============營位介紹============== -->
   <section id="wowPallet" class="container py-5">
     <div class="row row-cols-2 row-cols-md-4 g-0 mt-5">
-      <img class="col object-fit-cover" src="https://picsum.photos/300/300/?random=1">
-      <img class="col object-fit-cover" src="https://picsum.photos/300/300/?random=2">
-      <img class="col object-fit-cover" src="https://picsum.photos/300/300/?random=3">
-      <img class="col object-fit-cover" src="https://picsum.photos/300/300/?random=4">
+      <img class="gallery-pic col object-fit-cover" src="https://picsum.photos/300/300/?random=1">
+      <img class="gallery-pic col object-fit-cover" src="https://picsum.photos/300/300/?random=2">
+      <img class="gallery-pic col object-fit-cover" src="https://picsum.photos/300/300/?random=3">
+      <img class="gallery-pic col object-fit-cover" src="https://picsum.photos/300/300/?random=4">
     </div>
     <header class="h2 border-start border-5 border-warning ps-4 my-5">營位介紹</header>
     <article class="row row-cols-1 row-cols-md-2 g-5 flex-row-reverse">
@@ -198,8 +201,322 @@
 
     </article>
   </section>
+  <!-- ==============探索體驗============== -->
+  <section id="wowPark" class="container-fluid py-5 overflow-hidden">
+    <div class="container">
+      <header class="h2 border-start border-5 border-warning ps-4 my-5">探索體驗</header>
+    </div>
+    <p class="text-center w-75 mx-auto mb-5">
+      洛奇渡假村腹地面積生態豐富，擁有眾多的設施周邊供您滿足整天的玩樂。不只玩的快樂也放得輕鬆。請盡情享受我們的人間樂園，帶回流連忘返的快樂心情，為您旅途點綴豐富回憶。</p>
+    <article class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2 g-md-0 text-dark pb-mb-5">
+      <div class="col">
+        <img class="card-img" src="https://picsum.photos/800/600/?random=11">
+        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+          <h5 class="card-title bg-warning fw-bolder rounded-pill px-4 py-2">圖片標題</h5>
+        </div>
+      </div>
+      <div class="col">
+        <img class="card-img" src="https://picsum.photos/800/1200/?random=11">
+        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+          <h5 class="card-title bg-warning fw-bolder rounded-pill px-4 py-2">圖片標題</h5>
+        </div>
+      </div>
+      <div class="col">
+        <img class="card-img" src="https://picsum.photos/500/800/?random=11">
+        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+          <h5 class="card-title bg-warning fw-bolder rounded-pill px-4 py-2">圖片標題</h5>
+        </div>
+      </div>
+      <div class="col">
+        <img class="card-img" src="https://picsum.photos/800/600/?random=11">
+        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+          <h5 class="card-title bg-warning fw-bolder rounded-pill px-4 py-2">圖片標題</h5>
+        </div>
+      </div>
+      <div class="col">
+        <img class="card-img" src="https://picsum.photos/800/1000/?random=11">
+        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+          <h5 class="card-title bg-warning fw-bolder rounded-pill px-4 py-2">圖片標題</h5>
+        </div>
+      </div>
+      <div class="col">
+        <img class="card-img" src="https://picsum.photos/800/600/?random=11">
+        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+          <h5 class="card-title bg-warning fw-bolder rounded-pill px-4 py-2">圖片標題</h5>
+        </div>
+      </div>
+      <div class="col">
+        <img class="card-img" src="https://picsum.photos/600/800/?random=11">
+        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+          <h5 class="card-title bg-warning fw-bolder rounded-pill px-4 py-2">圖片標題</h5>
+        </div>
+      </div>
+      <div class="col">
+        <img class="card-img" src="https://picsum.photos/800/600/?random=11">
+        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+          <h5 class="card-title bg-warning fw-bolder rounded-pill px-4 py-2">圖片標題</h5>
+        </div>
+      </div>
+      <div class="col">
+        <img class="card-img" src="https://picsum.photos/600/600/?random=11">
+        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+          <h5 class="card-title bg-warning fw-bolder rounded-pill px-4 py-2">圖片標題</h5>
+        </div>
+      </div>
+      <div class="col">
+        <img class="card-img" src="https://picsum.photos/1100/600/?random=11">
+        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+          <h5 class="card-title bg-warning fw-bolder rounded-pill px-4 py-2">圖片標題</h5>
+        </div>
+      </div>
+      <div class="col">
+        <img class="card-img" src="https://picsum.photos/1200/400/?random=11">
+        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+          <h5 class="card-title bg-warning fw-bolder rounded-pill px-4 py-2">圖片標題</h5>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- ==============遊客服務============== -->
+  <section id="wowService" class="container-fluid py-5">
+    <div class="container">
+      <header class="h2 border-start border-5 border-warning ps-4 my-5">遊客服務</header>
+      <article class="row row-cols-1 row-cols-lg-3 gy-3">
+        <div class="col">
+          <div class="card text-bg-dark h-100">
+            <div class="card-header text-center p-4">
+              <h5 class="card-title h4 mb-4">設備租借</h5>
+              <img src="https://picsum.photos/300/300/?random=10"
+                class="card-img-top rounded-circle  border border-3 border-info">
+            </div>
+            <div class="card-body">
+              <label class="card-text">價目表</label>
+              <ul class="list-unstyled">
+                <!-- <li class="d-flex justify-content-between align-items-start gap-3">
+                <div>
+                  <div class="text-bg-info">snow peak 四人帳</div>
+                  <p>300x300cm，附槌繩釘配件</p>
+                </div>
+                <h4 class="text-info fst-italic">$1000</h4>
+              </li> -->
+                <li class="d-flex  flex-column align-content-between gap-3">
+                  <div class="text-bg-info">snow peak 四人帳</div>
+                  <div class="d-flex justify-content-between">
+                    <p>300x300cm,附槌繩釘配件</p>
+                    <h4 class="text-info fst-italic">$1000</h4>
+                  </div>
+                </li>
+                <li class="d-flex  flex-column align-content-between gap-3">
+                  <div class="text-bg-info">snow peak 四人帳</div>
+                  <div class="d-flex justify-content-between">
+                    <p>300x300cm,附槌繩釘配件</p>
+                    <h4 class="text-info fst-italic">$1000</h4>
+                  </div>
+                </li>
+                <li class="d-flex  flex-column align-content-between gap-3">
+                  <div class="text-bg-info">snow peak 四人帳</div>
+                  <div class="d-flex justify-content-between">
+                    <p>300x300cm,附槌繩釘配件</p>
+                    <h4 class="text-info fst-italic">$1000</h4>
+                  </div>
+                </li>
+                <li class="d-flex  flex-column align-content-between gap-3">
+                  <div class="text-bg-info">snow peak 四人帳</div>
+                  <div class="d-flex justify-content-between">
+                    <p>300x300cm,附槌繩釘配件</p>
+                    <h4 class="text-info fst-italic">$1000</h4>
+                  </div>
+                </li>
+                <li class="d-flex  flex-column align-content-between gap-3">
+                  <div class="text-bg-info">snow peak 四人帳</div>
+                  <div class="d-flex justify-content-between">
+                    <p>300x300cm,附槌繩釘配件</p>
+                    <h4 class="text-info fst-italic">$1000</h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-bg-dark h-100">
+            <div class="card-header text-center p-4">
+              <h5 class="card-title h4 mb-4">會館設施</h5>
+              <img src="https://picsum.photos/300/300/?random=30"
+                class="card-img-top rounded-circle  border border-3 border-secondary">
+            </div>
+            <div class="card-body">
+              <header class="card-text d-flex justify-content-between text-warning">
+                <label class="card-text">露天溫泉</label>
+                <h4 class="fst-italic">$1000</h4>
+              </header>
+              <p>
+                碳酸氫鹽泉，透過身體皮膚促進血液迴圈。加速新陳代謝，其礦物質可刺激自律神經、內分泌及免疫系統，在溫泉中沐浴時，身體將浸泡在天然礦物質中，礦物質將促進血液循環和氧氣流量增加，促進新陳代謝。
+              </p>
+              <header class="card-text d-flex justify-content-between text-warning">
+                <label class="card-text">露天溫泉</label>
+                <h4 class="fst-italic">$1000</h4>
+              </header>
+              <p>
+                碳酸氫鹽泉，透過身體皮膚促進血液迴圈。加速新陳代謝，其礦物質可刺激自律神經、內分泌及免疫系統，在溫泉中沐浴時，身體將浸泡在天然礦物質中，礦物質將促進血液循環和氧氣流量增加，促進新陳代謝。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-bg-dark h-100">
+            <div class="card-header text-center p-4">
+              <h5 class="card-title h4 mb-4">美味饗宴</h5>
+              <img src="https://picsum.photos/300/300/?random=40"
+                class="card-img-top rounded-circle  border border-3 border-success">
+            </div>
+            <div class="card-body">
+              <header class="card-text d-flex justify-content-between text-success">
+                <label class="card-text">烤肉組合/5人份</label>
+                <h4 class="fst-italic">$1000</h4>
+              </header>
+              <ul>
+                <li>櫻桃鴨菲力300g</li>
+                <li>塔香雞腿肉350g</li>
+                <li>岩燒豬里肌肉400g</li>
+                <li>古早味炭烤香腸5條</li>
+                <li>特製客家鹹豬肉150g</li>
+                <li>和風雪花培根片10片</li>
+                <li>薄鹽鯖魚一份</li>
+                <li>香烤基隆天婦羅5片</li>
+                <li>金黃冰心地瓜5條</li>
+                <li>燒烤蔬菜盒一份</li>
+                <li>白玉百頁10個</li>
+                <li>手工吐司1小條</li>
+                <li>拋棄式烤爐1組、木炭2斤、餐具全套組1組</li>
+                <li>特調燒烤烤肉醬1份、精緻佐料包1份</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- ==============營區守則============== -->
+  <section id="wowRule" class="container py-5">
+    <div class="container">
+      <header class="h2 border-start border-5 border-warning ps-4 my-5">營區守則</header>
+      <article class="row row-cols-1 row-cols-md-2 g-5 flex-row-reverse">
+        <div class="col" alt="營區守則圖片">
+          <img class="img-thumbnail" src="https://picsum.photos/800/600/?random=1">
+        </div>
+        <div class="col" alt="營區守則內容">
+          <div class="accordion accordion-flush" id="wowAccordion">
+            <div class="accordion-item mb-3 rounded-5 overflow-hidden">
+              <h2 class="accordion-header accordion-button btn collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#rule-01">
+                <i class="fa-regular fa-circle-question me-2"></i>
+                營地營業進場時間
+              </h2>
+              <div id="rule-01" class="accordion-collapse collapse" data-bs-parent="#wowAccordion">
+                <div class="accordion-body">
+                  <p>非連假：入場時間10:00 / 退場時間12:00</p>
+                  <p>連假：入場時間12:00 / 退場時間12:00</p>
+                  <ul>
+                    <li>預訂(星期五)二天一夜露營，請於星期六上午10:00前離場，以提供星期六訂位者使用，造成不便敬請見諒。</li>
+                    <li>連續假日營地紮營時間為中午12點至隔日中午12點，以供下位紮營者使用。</li>
+                    <li>週五(或前一晚) 提前進場夜衝（限隔日續住者) 17:00~22:00 可入營，17:00前到場，以整日收費計算，請於23:00前搭營完成，避免打擾已就寢露友。</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-3 rounded-5 overflow-hidden">
+              <h2 class="accordion-header accordion-button btn collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#rule-02">
+                <i class="fa-regular fa-circle-question me-2"></i>
+                裸湯開放時間
+              </h2>
+              <div id="rule-02" class="accordion-collapse collapse" data-bs-parent="#wowAccordion">
+                <div class="accordion-body">
+                  <p>非連假：入場時間10:00 / 退場時間12:00</p>
+                  <p>連假：入場時間12:00 / 退場時間12:00</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-3 rounded-5 overflow-hidden">
+              <h2 class="accordion-header accordion-button btn collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#rule-03">
+                <i class="fa-regular fa-circle-question me-2"></i>
+                預定露營前解約日
+              </h2>
+              <div id="rule-03" class="accordion-collapse collapse" data-bs-parent="#wowAccordion">
+                <div class="accordion-body">
+                  <p>非連假：入場時間10:00 / 退場時間12:00</p>
+                  <p>連假：入場時間12:00 / 退場時間12:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
 
+  <!-- ==============聯絡我們============== -->
+  <section id="wowContact" class="py-5">
+    <div class="container">
+      <div class="container" id="ff-compose"></div>
+      <script async defer
+        src="https://formfacade.com/include/117151097350419987425/form/1FAIpQLSf04UdFSfYBAZMlmBptr4lMBETErkr9xk0LPnnkOZRx21ob4Q/bootstrap.js?div=ff-compose"></script>
+    </div>
+  </section>
+  <!-- 自己研究V2 -->
+  <!-- <section id="wowContactV2" class="py-5">
+    <div class="container">
+      <div class="container" id="ff-compose"></div>
+      <script async defer
+        src="https://formfacade.com/include/117151097350419987425/form/1FAIpQLSf04UdFSfYBAZMlmBptr4lMBETErkr9xk0LPnnkOZRx21ob4Q/bootstrap.js?div=ff-compose"></script>
+    </div>
+  </section> -->
 
+  <!-- 頁尾區 -->
+  <footer class="text-bg-dark">
+    <div class="bg-light bg-opacity-10">
+      <div class="container py-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+          <div class="col">
+            <h5>WOW渡假村</h5>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span>243 新北市泰山區貴子里致遠新村55之1號</li>
+              <li><span class="fa-li"><i class="fa-solid fa-phone"></i></span>02-2901-8274</li>
+              <li><span class="fa-li"><i class="fa-solid fa-print"></i></span>02-2908-4773</li>
+              <li><span class="fa-li"><i class="fa-regular fa-envelope"></i></span>service@toyugi.com.tw</li>
+            </ul>
+            <a class="btn btn-primary rounded-circle d-inline-flex justify-content-center align-items-center mx-1 fs-5"
+              style="width:2.5rem;height:2.5rem" link="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="btn btn-danger rounded-circle d-inline-flex justify-content-center align-items-center mx-1 fs-5"
+              style="width:2.5rem;height:2.5rem" link="#"><i class="fa-brands fa-youtube"></i></a>
+            <a class="btn btn-success rounded-circle d-inline-flex justify-content-center align-items-center mx-1 fs-4"
+              style="width:2.5rem;height:2.5rem" link="#"><i class="fa-brands fa-line"></i></a>
+          </div>
+          <div class="col">
+            <h5>自行開車</h5>
+            <p> 高速公路五股交流道下（往新莊、泰山），經新五路至新北大道右轉，直行至貴子路口右轉，貴子路直行至明志路左轉。於明志路繼續前行約 100 公尺右轉工專路，即可抵達明科技大學。 </p>
+            <p> 由台北車站走忠孝橋，直行高架道路，下到平面道路之後直行至貴子路口右轉，貴子路直行至明志路左轉，於明志路繼續前行約 100 公尺右轉工專路，即可抵達明科技大學。 明志科大「汽車」停車費 30
+              元/小時，請儘量搭乘大眾交通工具或機車（免停車費）。 </p>
+          </div>
+          <div class="col">
+            <div class="ratio ratio-1x1">
+              <iframe class="rounded-circle"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7963227994414!2d121.41973114049325!3d25.04098527790419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bf82526ba9%3A0x6e95d14c11132e5!2z5piO5b-X56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1749366485298!5m2!1szh-TW!2stw"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center py-3">
+      <small>泰山職業訓練中心課程教材編譯，本圖片素材引用來源自 snow peak JP 並僅作為學術用途。<br>
+        Copyright © 2022 <span class="fw-bold text-warning">WOW數位設計</span>. all rights reserved</small>
+    </div>
+  </footer>
 </body>
 
 </html>
